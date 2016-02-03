@@ -11,7 +11,13 @@ class LSM303(Adafruit_I2C):
                                              # Default    Type
     LSM303_REGISTER_ACCEL_CTRL_REG1_A = 0x20 # 00000111   rw
     LSM303_REGISTER_ACCEL_CTRL_REG4_A = 0x23 # 00000000   rw
+    # X-axis acceleration date in 2's complement
     LSM303_REGISTER_ACCEL_OUT_X_L_A   = 0x28
+    # Y-axis acceleration date in 2's complement
+    LSM303_REGISTER_ACCEL_OUT_Y_L_A   = 0x2A
+    # Z-axis acceleration date in 2's complement
+    LSM303_REGISTER_ACCEL_OUT_Z_L_A   = 0x2C
+    
     LSM303_REGISTER_MAG_CRB_REG_M     = 0x01
     LSM303_REGISTER_MAG_MR_REG_M      = 0x02
     LSM303_REGISTER_MAG_OUT_X_H_M     = 0x03
