@@ -1,0 +1,2 @@
+fix, lat, lon, heading, speed, altitude, num_sat, time_stamp, date_stamp
+0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 13:39:10.749839, 2016-02-09
