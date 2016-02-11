@@ -30,7 +30,7 @@ last_interrupt = datetime.now()
 t0 = datetime.now()
 count = 0
 dt = []
-logger = open(str('log_file_' + str(file_number) + '.txt'), 'w')
+
 
 #Set Altimeter
 temp = 0
@@ -88,12 +88,14 @@ GPIO.setup(21, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 def go(channel):
 	global last_interrupt
 	global start
-	print('Button pushed')
-	tf = datetime.now() - last_interrupt 
+	tf = datetime.now() - last_interrupt
 	if tf.seconds >= 1:
 		last_interrupt = datetime.now()
 		start = not start
-		print('Interrupt successful')
+		if start:
+                        print('Start')
+                else:
+                        print('Stop')
 	
 GPIO.add_event_detect(21,GPIO.FALLING)
 GPIO.add_event_callback(21, go)
@@ -152,7 +154,10 @@ GPIO.add_event_callback(22, ch4)
 #**************************************************************
 while not start:
 	print('Waiting')
-	time.sleep(.5)
+	GPIO.output(5,1)
+        time.sleep(.25)
+	GPIO.output(5,0)
+	time.sleep(.25)
 print('Going\n')
 GPIO.output(5,1)	
 #**************************************************************
@@ -180,12 +185,10 @@ def GPS_logging():
 	while start:
 		(fix, lat, lon, heading, speed, altitude, num_sat, timestamp, datestamp) = gps_sensor.read_sensor()
 		gps_data_avail = True
-		time.sleep(1)
+		time.sleep(2)
 
-run_I2C_sensors = threading.Thread(target=read_I2C_sensors)
-run_GPS_logging = threading.Thread(target=GPS_logging)
-run_I2C_sensors.start()
-run_GPS_logging.start()
+
+
 
 
 
@@ -193,29 +196,46 @@ run_GPS_logging.start()
 #               Main Loop
 #       The program executes from here.
 #**************************************************************
-logger.write('fix, lat, lon, heading, ')
-logger.write('speed, altitude, num_sat, ')
-logger.write('time_stamp, date_stamp\n')
-while start:
-	while not i2c_data_avail and start:
-		time.sleep(0)
-	i2c_data_avail = False
-	if gps_data_avail:
-		#print('Printing with GPS Data.\n')
-		gps_data_avail = False
-		#Write with GPS data
-		logger.write(str(str(fix) + ', ' + str(lat) + ', ' + str(lon) + ', ' + str(heading) + ', '))
-		logger.write(str(str(speed) + ', ' + str(altitude) + ', ' + str(num_sat) + ', '))
-		logger.write(str(str(timestamp) + ', ' + str(datestamp) + '\n'))
-	else:
-		#print('Printing without GPS Data.\n')
-		#logger.write(str(count) + ' Printing without GPS Data.\n')
-                time.sleep(0)
+
+while True:
+        logger = open(str('log_file_' + str(file_number) + '.txt'), 'w')
+        logger.write('fix, lat, lon, heading, ')
+        logger.write('speed, altitude, num_sat, ')
+        logger.write('time_stamp, date_stamp\n')
+        run_I2C_sensors = threading.Thread(target=read_I2C_sensors)
+        run_GPS_logging = threading.Thread(target=GPS_logging)
+        run_I2C_sensors.start()
+        run_GPS_logging.start()
+        while start:
+                while not i2c_data_avail and start:
+                        time.sleep(0)
+                i2c_data_avail = False
+                if gps_data_avail:
+                        #print('Printing with GPS Data.\n')
+                        gps_data_avail = False
+                        #Write with GPS data
+                        logger.write(str(str(fix) + ', ' + str(lat) + ', ' + str(lon) + ', ' + str(heading) + ', '))
+                        logger.write(str(str(speed) + ', ' + str(altitude) + ', ' + str(num_sat) + ', '))
+                        logger.write(str(str(timestamp) + ', ' + str(datestamp) + '\n'))
+                else:
+                        #print('Printing without GPS Data.\n')
+                        #logger.write(str(count) + ' Printing without GPS Data.\n')
+                        time.sleep(0)
+        GPIO.output(5,0)
+        logger.close()
+        run_I2C_sensors.join()
+        run_GPS_logging.join()
+        file_number = file_number + 1
+        running_time = datetime.now() - t0
+        print('Complete: ' + str(running_time.seconds) + ' seconds')
+        while not start:
+                print('Waiting in main loop')
+                GPIO.output(5,1)
+                time.sleep(.25)
+                GPIO.output(5,0)
+                time.sleep(.25)
+        print('Going\n')
+        GPIO.output(5,1)
 
 	
-GPIO.output(5,0)
-logger.close()
-run_I2C_sensors.join()
-run_GPS_logging.join()
-running_time = datetime.now() - t0
-print('Complete: ' + str(running_time.seconds) + ' seconds')
+
