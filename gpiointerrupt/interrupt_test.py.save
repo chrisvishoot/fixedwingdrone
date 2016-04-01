@@ -1,0 +1,43 @@
+import RPi.GPIO as GPIO
+import time
+from datetime import datetime
+
+
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(12,GPIO.OUT)
+GPIO.setup(16,GPIO.OUT)
+GPIO.setup(20,GPIO.OUT)
+
+GPIO.setup(17, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+GPIO.setup(22, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+GPIO.setup(27, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+
+p12 = GPIO.PWM(12,50)
+p16 = GPIO.PWM(16,40)
+p20 = GPIO.PWM(20,50)
+p12.start(1)
+p16.start(1)
+p20.start(1)
+p12.ChangeDutyCycle(20)
+p16.ChangeDutyCycle(30)
+p20.ChangeDutyCycle(50)
+
+def bttn_one(channel):
+	print(channel)
+def bttn_two(channel):
+	print(channel)
+def bttn_three(channel):
+	print(channel)
+
+GPIO.add_event_detect(17, GPIO.BOTH)
+GPIO.add_event_detect(22, GPIO.BOTH)
+GPIO.add_event_detect(27, GPIO.BOTH)
+GPIO.add_event_callback(17, bttn_one)
+GPIO.add_event_callback(22, bttn_two)
+GPIO.add_event_callback(27, bttn_three)
+
+
+
+while True:
+	dt = datetime.n	
+	
