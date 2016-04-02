@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="Part5">
+		<CBX_INST_ENTRY INSTANCE_NAME="|Part5|MyCustomCounter:my_Counter|Altera_Counter:altera_counter|lpm_counter:LPM_COUNTER_component" CBX_FILE_NAME="cntr_ksi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Part5|MyCustomCounter:my_Counter|ClockCycleCounter:myClockCycleCounter|lpm_counter:LPM_COUNTER_component" CBX_FILE_NAME="cntr_hfj.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
