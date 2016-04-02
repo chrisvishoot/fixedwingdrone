@@ -1,0 +1,89 @@
+|FlightControl
+Rec_Rudder[0] => Rec_Rudder[0].IN2
+Rec_Elevator[0] => Rec_Elevator[0].IN1
+Rec_Aileron[0] => Rec_Aileron[0].IN1
+Rec_Throttle[0] => Rec_Throttle[0].IN2
+AUXONE[0] => ~NO_FANOUT~
+AUXTWO[0] => ~NO_FANOUT~
+SD_Rudder[0] => SD_Rudder[0].IN1
+SD_Elevator[0] => SD_Elevator[0].IN1
+SD_Aileron[0] => SD_Aileron[0].IN1
+SD_Throttle[0] => SD_Throttle[0].IN1
+SD_Pan[0] => SD_Pan[0].IN1
+SD_Tilt[0] => SD_Tilt[0].IN1
+RPIAckCruise[0] => RPIAckCruise[0].IN1
+RPIAckAuto[0] => RPIAckAuto[0].IN1
+XbeeGpsSelect[0] => XbeeGpsSelect[0].IN1
+RPITx[0] => RPITx[0].IN1
+GpsTx[0] => GpsTx[0].IN1
+XbeeTx[0] => XbeeTx[0].IN1
+RudderOutput[0] <= AssignOutputsFromMode:assignOutputsFromMode_inst_one.port14
+ElevatorOutput[0] <= AssignOutputsFromMode:assignOutputsFromMode_inst_one.port15
+AileronOutput[0] <= AssignOutputsFromMode:assignOutputsFromMode_inst_one.port16
+ThrottleOutput[0] <= AssignOutputsFromMode:assignOutputsFromMode_inst_one.port17
+PanOutput[0] <= AssignOutputsFromMode:assignOutputsFromMode_inst_one.port18
+TiltOutput[0] <= AssignOutputsFromMode:assignOutputsFromMode_inst_one.port19
+RPIReqCruise[0] <= <GND>
+RPIReqAuto[0] <= <GND>
+RPIRx[0] <= XbeeGpsSwitch:xbeegpsswitch_inst_one.port4
+GpsRx[0] <= XbeeGpsSwitch:xbeegpsswitch_inst_one.port5
+XbeeRx[0] <= XbeeGpsSwitch:xbeegpsswitch_inst_one.port6
+
+
+|FlightControl|RPI_Handshake:handshake_inst_one
+RPI_Ack[0] => Mode[0].DATAIN
+Mode[0] <= RPI_Ack[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FlightControl|RPI_Handshake:handshake_inst_two
+RPI_Ack[0] => Mode[0].DATAIN
+Mode[0] <= RPI_Ack[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FlightControl|XbeeGpsSwitch:xbeegpsswitch_inst_one
+XbeeGpsSelect[0] => RPIRx.IN0
+XbeeGpsSelect[0] => XbeeRx[0]$latch.LATCH_ENABLE
+XbeeGpsSelect[0] => RPIRx.IN0
+XbeeGpsSelect[0] => GpsRx[0]$latch.LATCH_ENABLE
+RPITx[0] => GpsRx[0]$latch.DATAIN
+RPITx[0] => XbeeRx[0]$latch.DATAIN
+GpsTx[0] => RPIRx.IN1
+XbeeTx[0] => RPIRx.IN1
+RPIRx[0] <= RPIRx.DB_MAX_OUTPUT_PORT_TYPE
+GpsRx[0] <= GpsRx[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+XbeeRx[0] <= XbeeRx[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FlightControl|AssignOutputsFromMode:assignOutputsFromMode_inst_one
+Auto[0] => Rudder.IN0
+Auto[0] => Elevator.IN0
+Auto[0] => Aileron.IN0
+Auto[0] => Pan.IN0
+Auto[0] => Rudder.IN0
+Auto[0] => Elevator.IN0
+Auto[0] => Aileron.IN0
+Auto[0] => Pan.IN0
+Critical[0] => Rudder.IN1
+Critical[0] => Pan.IN1
+Critical[0] => Rudder.IN1
+Critical[0] => Pan.IN1
+Rec_Rudder[0] => Rudder.IN1
+Rec_Elevator[0] => Elevator.IN1
+Rec_Aileron[0] => Aileron.IN1
+Rec_Throttle[0] => Throttle.IN1
+Rec_Pan[0] => Pan.IN1
+Rec_Tilt[0] => Tilt.IN1
+SD_Rudder[0] => Rudder.IN1
+SD_Elevator[0] => Elevator.IN1
+SD_Aileron[0] => Aileron.IN1
+SD_Throttle[0] => Throttle.IN1
+SD_Pan[0] => Pan.IN1
+SD_Tilt[0] => Tilt.IN1
+Rudder[0] <= Rudder.DB_MAX_OUTPUT_PORT_TYPE
+Elevator[0] <= Elevator.DB_MAX_OUTPUT_PORT_TYPE
+Aileron[0] <= Aileron.DB_MAX_OUTPUT_PORT_TYPE
+Throttle[0] <= Throttle.DB_MAX_OUTPUT_PORT_TYPE
+Pan[0] <= Pan.DB_MAX_OUTPUT_PORT_TYPE
+Tilt[0] <= Tilt.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,1042 @@
+TimeQuest Timing Analyzer report for FlightControl
+Thu Mar 31 06:12:24 2016
+Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Minimum Pulse Width: 'XbeeGpsSelect[0]'
+ 13. Setup Times
+ 14. Hold Times
+ 15. Clock to Output Times
+ 16. Minimum Clock to Output Times
+ 17. Propagation Delay
+ 18. Minimum Propagation Delay
+ 19. Slow 1200mV 85C Model Metastability Report
+ 20. Slow 1200mV 0C Model Fmax Summary
+ 21. Slow 1200mV 0C Model Setup Summary
+ 22. Slow 1200mV 0C Model Hold Summary
+ 23. Slow 1200mV 0C Model Recovery Summary
+ 24. Slow 1200mV 0C Model Removal Summary
+ 25. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 26. Slow 1200mV 0C Model Minimum Pulse Width: 'XbeeGpsSelect[0]'
+ 27. Setup Times
+ 28. Hold Times
+ 29. Clock to Output Times
+ 30. Minimum Clock to Output Times
+ 31. Propagation Delay
+ 32. Minimum Propagation Delay
+ 33. Slow 1200mV 0C Model Metastability Report
+ 34. Fast 1200mV 0C Model Setup Summary
+ 35. Fast 1200mV 0C Model Hold Summary
+ 36. Fast 1200mV 0C Model Recovery Summary
+ 37. Fast 1200mV 0C Model Removal Summary
+ 38. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 39. Fast 1200mV 0C Model Minimum Pulse Width: 'XbeeGpsSelect[0]'
+ 40. Setup Times
+ 41. Hold Times
+ 42. Clock to Output Times
+ 43. Minimum Clock to Output Times
+ 44. Propagation Delay
+ 45. Minimum Propagation Delay
+ 46. Fast 1200mV 0C Model Metastability Report
+ 47. Multicorner Timing Analysis Summary
+ 48. Setup Times
+ 49. Hold Times
+ 50. Clock to Output Times
+ 51. Minimum Clock to Output Times
+ 52. Progagation Delay
+ 53. Minimum Progagation Delay
+ 54. Board Trace Model Assignments
+ 55. Input Transition Times
+ 56. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 57. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 58. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 59. Clock Transfers
+ 60. Report TCCS
+ 61. Report RSKM
+ 62. Unconstrained Paths
+ 63. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; FlightControl                                                     ;
+; Device Family      ; Cyclone IV E                                                      ;
+; Device Name        ; EP4CE22F17C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Enabled                                                           ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                             ;
++------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------+
+; Clock Name       ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets              ;
++------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------+
+; XbeeGpsSelect[0] ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { XbeeGpsSelect[0] } ;
++------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+----------------------+
+
+
+--------------------------------------
+; Slow 1200mV 85C Model Fmax Summary ;
+--------------------------------------
+No paths to report.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
+---------------------------------------
+; Slow 1200mV 85C Model Setup Summary ;
+---------------------------------------
+No paths to report.
+
+
+--------------------------------------
+; Slow 1200mV 85C Model Hold Summary ;
+--------------------------------------
+No paths to report.
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++------------------+--------+-----------------------+
+; Clock            ; Slack  ; End Point TNS         ;
++------------------+--------+-----------------------+
+; XbeeGpsSelect[0] ; -3.000 ; -3.000                ;
++------------------+--------+-----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width: 'XbeeGpsSelect[0]'                                                                              ;
++--------+--------------+----------------+------------------+------------------+------------+------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock            ; Clock Edge ; Target                                         ;
++--------+--------------+----------------+------------------+------------------+------------+------------------------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; XbeeGpsSelect[0] ; Rise       ; XbeeGpsSelect[0]                               ;
+; 0.326  ; 0.326        ; 0.000          ; Low Pulse Width  ; XbeeGpsSelect[0] ; Rise       ; xbeegpsswitch_inst_one|GpsRx[0]|datac          ;
+; 0.326  ; 0.326        ; 0.000          ; Low Pulse Width  ; XbeeGpsSelect[0] ; Rise       ; xbeegpsswitch_inst_one|XbeeRx[0]|datac         ;
+; 0.328  ; 0.328        ; 0.000          ; High Pulse Width ; XbeeGpsSelect[0] ; Fall       ; XbeeGpsSwitch:xbeegpsswitch_inst_one|XbeeRx[0] ;
+; 0.332  ; 0.332        ; 0.000          ; Low Pulse Width  ; XbeeGpsSelect[0] ; Rise       ; XbeeGpsSwitch:xbeegpsswitch_inst_one|GpsRx[0]  ;
+; 0.335  ; 0.335        ; 0.000          ; Low Pulse Width  ; XbeeGpsSelect[0] ; Rise       ; XbeeGpsSelect[0]~input|o                       ;
+; 0.351  ; 0.351        ; 0.000          ; Low Pulse Width  ; XbeeGpsSelect[0] ; Rise       ; XbeeGpsSelect[0]~inputclkctrl|inclk[0]         ;
+; 0.351  ; 0.351        ; 0.000          ; Low Pulse Width  ; XbeeGpsSelect[0] ; Rise       ; XbeeGpsSelect[0]~inputclkctrl|outclk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; XbeeGpsSelect[0] ; Rise       ; XbeeGpsSelect[0]~input|i                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; XbeeGpsSelect[0] ; Rise       ; XbeeGpsSelect[0]~input|i                       ;
+; 0.649  ; 0.649        ; 0.000          ; High Pulse Width ; XbeeGpsSelect[0] ; Rise       ; XbeeGpsSelect[0]~inputclkctrl|inclk[0]         ;
+; 0.649  ; 0.649        ; 0.000          ; High Pulse Width ; XbeeGpsSelect[0] ; Rise       ; XbeeGpsSelect[0]~inputclkctrl|outclk           ;
+; 0.665  ; 0.665        ; 0.000          ; High Pulse Width ; XbeeGpsSelect[0] ; Rise       ; XbeeGpsSelect[0]~input|o                       ;
+; 0.666  ; 0.666        ; 0.000          ; High Pulse Width ; XbeeGpsSelect[0] ; Rise       ; XbeeGpsSwitch:xbeegpsswitch_inst_one|GpsRx[0]  ;
+; 0.670  ; 0.670        ; 0.000          ; Low Pulse Width  ; XbeeGpsSelect[0] ; Fall       ; XbeeGpsSwitch:xbeegpsswitch_inst_one|XbeeRx[0] ;
+; 0.672  ; 0.672        ; 0.000          ; High Pulse Width ; XbeeGpsSelect[0] ; Rise       ; xbeegpsswitch_inst_one|GpsRx[0]|datac          ;
+; 0.672  ; 0.672        ; 0.000          ; High Pulse Width ; XbeeGpsSelect[0] ; Rise       ; xbeegpsswitch_inst_one|XbeeRx[0]|datac         ;
++--------+--------------+----------------+------------------+------------------+------------+------------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Setup Times                                                                  ;
++-----------+------------------+-------+-------+------------+------------------+
+; Data Port ; Clock Port       ; Rise  ; Fall  ; Clock Edge ; Clock Reference  ;
++-----------+------------------+-------+-------+------------+------------------+
+; RPITx[*]  ; XbeeGpsSelect[0] ; 0.286 ; 0.436 ; Rise       ; XbeeGpsSelect[0] ;
+;  RPITx[0] ; XbeeGpsSelect[0] ; 0.286 ; 0.436 ; Rise       ; XbeeGpsSelect[0] ;
+; RPITx[*]  ; XbeeGpsSelect[0] ; 0.080 ; 0.217 ; Fall       ; XbeeGpsSelect[0] ;
+;  RPITx[0] ; XbeeGpsSelect[0] ; 0.080 ; 0.217 ; Fall       ; XbeeGpsSelect[0] ;
++-----------+------------------+-------+-------+------------+------------------+
+
+
++------------------------------------------------------------------------------+
+; Hold Times                                                                   ;
++-----------+------------------+-------+-------+------------+------------------+
+; Data Port ; Clock Port       ; Rise  ; Fall  ; Clock Edge ; Clock Reference  ;
++-----------+------------------+-------+-------+------------+------------------+
+; RPITx[*]  ; XbeeGpsSelect[0] ; 0.495 ; 0.363 ; Rise       ; XbeeGpsSelect[0] ;
+;  RPITx[0] ; XbeeGpsSelect[0] ; 0.495 ; 0.363 ; Rise       ; XbeeGpsSelect[0] ;
+; RPITx[*]  ; XbeeGpsSelect[0] ; 0.686 ; 0.561 ; Fall       ; XbeeGpsSelect[0] ;
+;  RPITx[0] ; XbeeGpsSelect[0] ; 0.686 ; 0.561 ; Fall       ; XbeeGpsSelect[0] ;
++-----------+------------------+-------+-------+------------+------------------+
+
+
++-------------------------------------------------------------------------------+
+; Clock to Output Times                                                         ;
++------------+------------------+-------+-------+------------+------------------+
+; Data Port  ; Clock Port       ; Rise  ; Fall  ; Clock Edge ; Clock Reference  ;
++------------+------------------+-------+-------+------------+------------------+
+; GpsRx[*]   ; XbeeGpsSelect[0] ; 5.099 ; 5.085 ; Rise       ; XbeeGpsSelect[0] ;
+;  GpsRx[0]  ; XbeeGpsSelect[0] ; 5.099 ; 5.085 ; Rise       ; XbeeGpsSelect[0] ;
+; RPIRx[*]   ; XbeeGpsSelect[0] ; 6.278 ; 6.276 ; Rise       ; XbeeGpsSelect[0] ;
+;  RPIRx[0]  ; XbeeGpsSelect[0] ; 6.278 ; 6.276 ; Rise       ; XbeeGpsSelect[0] ;
+; RPIRx[*]   ; XbeeGpsSelect[0] ; 6.278 ; 6.276 ; Fall       ; XbeeGpsSelect[0] ;
+;  RPIRx[0]  ; XbeeGpsSelect[0] ; 6.278 ; 6.276 ; Fall       ; XbeeGpsSelect[0] ;
+; XbeeRx[*]  ; XbeeGpsSelect[0] ; 6.848 ; 6.908 ; Fall       ; XbeeGpsSelect[0] ;
+;  XbeeRx[0] ; XbeeGpsSelect[0] ; 6.848 ; 6.908 ; Fall       ; XbeeGpsSelect[0] ;
++------------+------------------+-------+-------+------------+------------------+
+
+
++-------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                 ;
++------------+------------------+-------+-------+------------+------------------+
+; Data Port  ; Clock Port       ; Rise  ; Fall  ; Clock Edge ; Clock Reference  ;
++------------+------------------+-------+-------+------------+------------------+
+; GpsRx[*]   ; XbeeGpsSelect[0] ; 4.945 ; 4.931 ; Rise       ; XbeeGpsSelect[0] ;
+;  GpsRx[0]  ; XbeeGpsSelect[0] ; 4.945 ; 4.931 ; Rise       ; XbeeGpsSelect[0] ;
+; RPIRx[*]   ; XbeeGpsSelect[0] ; 6.037 ; 5.945 ; Rise       ; XbeeGpsSelect[0] ;
+;  RPIRx[0]  ; XbeeGpsSelect[0] ; 6.037 ; 5.945 ; Rise       ; XbeeGpsSelect[0] ;
+; RPIRx[*]   ; XbeeGpsSelect[0] ; 6.037 ; 5.945 ; Fall       ; XbeeGpsSelect[0] ;
+;  RPIRx[0]  ; XbeeGpsSelect[0] ; 6.037 ; 5.945 ; Fall       ; XbeeGpsSelect[0] ;
+; XbeeRx[*]  ; XbeeGpsSelect[0] ; 6.680 ; 6.740 ; Fall       ; XbeeGpsSelect[0] ;
+;  XbeeRx[0] ; XbeeGpsSelect[0] ; 6.680 ; 6.740 ; Fall       ; XbeeGpsSelect[0] ;
++------------+------------------+-------+-------+------------+------------------+
+
+
++---------------------------------------------------------------------+
+; Propagation Delay                                                   ;
++-----------------+-------------------+-------+-------+-------+-------+
+; Input Port      ; Output Port       ; RR    ; RF    ; FR    ; FF    ;
++-----------------+-------------------+-------+-------+-------+-------+
+; GpsTx[0]        ; RPIRx[0]          ; 5.440 ;       ;       ; 5.503 ;
+; RPIAckAuto[0]   ; AileronOutput[0]  ; 6.666 ; 6.599 ; 7.084 ; 7.060 ;
+; RPIAckAuto[0]   ; ElevatorOutput[0] ; 6.932 ; 6.858 ; 7.342 ; 7.301 ;
+; RPIAckAuto[0]   ; PanOutput[0]      ; 7.023 ; 6.948 ; 7.428 ; 7.385 ;
+; RPIAckAuto[0]   ; RudderOutput[0]   ; 6.950 ; 6.869 ; 7.357 ; 7.309 ;
+; RPIAckAuto[0]   ; ThrottleOutput[0] ; 6.776 ; 6.701 ; 7.176 ; 7.133 ;
+; RPIAckAuto[0]   ; TiltOutput[0]     ; 7.014 ; 6.925 ; 7.418 ; 7.361 ;
+; RPIAckCruise[0] ; PanOutput[0]      ; 7.523 ; 7.533 ; 8.018 ; 7.870 ;
+; RPIAckCruise[0] ; RudderOutput[0]   ; 7.454 ; 7.459 ; 7.946 ; 7.793 ;
+; RPIAckCruise[0] ; ThrottleOutput[0] ; 7.309 ; 7.214 ; 7.694 ; 7.698 ;
+; RPIAckCruise[0] ; TiltOutput[0]     ; 7.511 ; 7.507 ; 8.003 ; 7.841 ;
+; Rec_Aileron[0]  ; AileronOutput[0]  ; 7.203 ;       ;       ; 7.589 ;
+; Rec_Elevator[0] ; ElevatorOutput[0] ; 7.468 ;       ;       ; 7.841 ;
+; Rec_Rudder[0]   ; PanOutput[0]      ; 7.103 ;       ;       ; 7.441 ;
+; Rec_Rudder[0]   ; RudderOutput[0]   ; 7.284 ;       ;       ; 7.642 ;
+; Rec_Throttle[0] ; ThrottleOutput[0] ; 6.652 ;       ;       ; 6.987 ;
+; Rec_Throttle[0] ; TiltOutput[0]     ; 6.890 ;       ;       ; 7.211 ;
+; SD_Aileron[0]   ; AileronOutput[0]  ; 7.002 ;       ;       ; 7.443 ;
+; SD_Elevator[0]  ; ElevatorOutput[0] ; 7.051 ;       ;       ; 7.374 ;
+; SD_Pan[0]       ; PanOutput[0]      ; 7.183 ;       ;       ; 7.534 ;
+; SD_Rudder[0]    ; RudderOutput[0]   ; 7.273 ;       ;       ; 7.587 ;
+; SD_Throttle[0]  ; ThrottleOutput[0] ; 7.096 ;       ;       ; 7.494 ;
+; SD_Tilt[0]      ; TiltOutput[0]     ; 7.551 ;       ;       ; 7.876 ;
+; XbeeTx[0]       ; RPIRx[0]          ; 7.627 ;       ;       ; 7.995 ;
++-----------------+-------------------+-------+-------+-------+-------+
+
+
++---------------------------------------------------------------------+
+; Minimum Propagation Delay                                           ;
++-----------------+-------------------+-------+-------+-------+-------+
+; Input Port      ; Output Port       ; RR    ; RF    ; FR    ; FF    ;
++-----------------+-------------------+-------+-------+-------+-------+
+; GpsTx[0]        ; RPIRx[0]          ; 5.275 ;       ;       ; 5.341 ;
+; RPIAckAuto[0]   ; AileronOutput[0]  ; 6.428 ; 6.363 ; 6.828 ; 6.800 ;
+; RPIAckAuto[0]   ; ElevatorOutput[0] ; 6.697 ; 6.625 ; 7.098 ; 7.057 ;
+; RPIAckAuto[0]   ; PanOutput[0]      ; 6.784 ; 6.711 ; 7.181 ; 7.138 ;
+; RPIAckAuto[0]   ; RudderOutput[0]   ; 6.713 ; 6.635 ; 7.112 ; 7.065 ;
+; RPIAckAuto[0]   ; ThrottleOutput[0] ; 6.547 ; 6.474 ; 6.939 ; 6.896 ;
+; RPIAckAuto[0]   ; TiltOutput[0]     ; 6.775 ; 6.689 ; 7.171 ; 7.115 ;
+; RPIAckCruise[0] ; PanOutput[0]      ; 7.265 ; 7.273 ; 7.748 ; 7.605 ;
+; RPIAckCruise[0] ; RudderOutput[0]   ; 7.198 ; 7.202 ; 7.677 ; 7.530 ;
+; RPIAckCruise[0] ; ThrottleOutput[0] ; 7.059 ; 6.966 ; 7.437 ; 7.439 ;
+; RPIAckCruise[0] ; TiltOutput[0]     ; 7.253 ; 7.248 ; 7.733 ; 7.577 ;
+; Rec_Aileron[0]  ; AileronOutput[0]  ; 6.957 ;       ;       ; 7.334 ;
+; Rec_Elevator[0] ; ElevatorOutput[0] ; 7.148 ;       ;       ; 7.499 ;
+; Rec_Rudder[0]   ; PanOutput[0]      ; 6.861 ;       ;       ; 7.191 ;
+; Rec_Rudder[0]   ; RudderOutput[0]   ; 6.985 ;       ;       ; 7.325 ;
+; Rec_Throttle[0] ; ThrottleOutput[0] ; 6.429 ;       ;       ; 6.756 ;
+; Rec_Throttle[0] ; TiltOutput[0]     ; 6.657 ;       ;       ; 6.971 ;
+; SD_Aileron[0]   ; AileronOutput[0]  ; 6.762 ;       ;       ; 7.193 ;
+; SD_Elevator[0]  ; ElevatorOutput[0] ; 6.812 ;       ;       ; 7.127 ;
+; SD_Pan[0]       ; PanOutput[0]      ; 6.880 ;       ;       ; 7.215 ;
+; SD_Rudder[0]    ; RudderOutput[0]   ; 7.024 ;       ;       ; 7.332 ;
+; SD_Throttle[0]  ; ThrottleOutput[0] ; 6.805 ;       ;       ; 7.158 ;
+; SD_Tilt[0]      ; TiltOutput[0]     ; 7.233 ;       ;       ; 7.544 ;
+; XbeeTx[0]       ; RPIRx[0]          ; 7.320 ;       ;       ; 7.669 ;
++-----------------+-------------------+-------+-------+-------+-------+
+
+
+----------------------------------------------
+; Slow 1200mV 85C Model Metastability Report ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
+-------------------------------------
+; Slow 1200mV 0C Model Fmax Summary ;
+-------------------------------------
+No paths to report.
+
+
+--------------------------------------
+; Slow 1200mV 0C Model Setup Summary ;
+--------------------------------------
+No paths to report.
+
+
+-------------------------------------
+; Slow 1200mV 0C Model Hold Summary ;
+-------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++------------------+--------+----------------------+
+; Clock            ; Slack  ; End Point TNS        ;
++------------------+--------+----------------------+
+; XbeeGpsSelect[0] ; -3.000 ; -3.000               ;
++------------------+--------+----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width: 'XbeeGpsSelect[0]'                                                                               ;
++--------+--------------+----------------+------------------+------------------+------------+------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock            ; Clock Edge ; Target                                         ;
++--------+--------------+----------------+------------------+------------------+------------+------------------------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; XbeeGpsSelect[0] ; Rise       ; XbeeGpsSelect[0]                               ;
+; 0.352  ; 0.352        ; 0.000          ; Low Pulse Width  ; XbeeGpsSelect[0] ; Rise       ; xbeegpsswitch_inst_one|XbeeRx[0]|datac         ;
+; 0.353  ; 0.353        ; 0.000          ; Low Pulse Width  ; XbeeGpsSelect[0] ; Rise       ; XbeeGpsSwitch:xbeegpsswitch_inst_one|GpsRx[0]  ;
+; 0.353  ; 0.353        ; 0.000          ; Low Pulse Width  ; XbeeGpsSelect[0] ; Rise       ; xbeegpsswitch_inst_one|GpsRx[0]|datac          ;
+; 0.357  ; 0.357        ; 0.000          ; High Pulse Width ; XbeeGpsSelect[0] ; Fall       ; XbeeGpsSwitch:xbeegpsswitch_inst_one|XbeeRx[0] ;
+; 0.358  ; 0.358        ; 0.000          ; Low Pulse Width  ; XbeeGpsSelect[0] ; Rise       ; XbeeGpsSelect[0]~input|o                       ;
+; 0.367  ; 0.367        ; 0.000          ; Low Pulse Width  ; XbeeGpsSelect[0] ; Rise       ; XbeeGpsSelect[0]~inputclkctrl|inclk[0]         ;
+; 0.367  ; 0.367        ; 0.000          ; Low Pulse Width  ; XbeeGpsSelect[0] ; Rise       ; XbeeGpsSelect[0]~inputclkctrl|outclk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; XbeeGpsSelect[0] ; Rise       ; XbeeGpsSelect[0]~input|i                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; XbeeGpsSelect[0] ; Rise       ; XbeeGpsSelect[0]~input|i                       ;
+; 0.633  ; 0.633        ; 0.000          ; High Pulse Width ; XbeeGpsSelect[0] ; Rise       ; XbeeGpsSelect[0]~inputclkctrl|inclk[0]         ;
+; 0.633  ; 0.633        ; 0.000          ; High Pulse Width ; XbeeGpsSelect[0] ; Rise       ; XbeeGpsSelect[0]~inputclkctrl|outclk           ;
+; 0.642  ; 0.642        ; 0.000          ; High Pulse Width ; XbeeGpsSelect[0] ; Rise       ; XbeeGpsSelect[0]~input|o                       ;
+; 0.642  ; 0.642        ; 0.000          ; Low Pulse Width  ; XbeeGpsSelect[0] ; Fall       ; XbeeGpsSwitch:xbeegpsswitch_inst_one|XbeeRx[0] ;
+; 0.646  ; 0.646        ; 0.000          ; High Pulse Width ; XbeeGpsSelect[0] ; Rise       ; XbeeGpsSwitch:xbeegpsswitch_inst_one|GpsRx[0]  ;
+; 0.647  ; 0.647        ; 0.000          ; High Pulse Width ; XbeeGpsSelect[0] ; Rise       ; xbeegpsswitch_inst_one|GpsRx[0]|datac          ;
+; 0.647  ; 0.647        ; 0.000          ; High Pulse Width ; XbeeGpsSelect[0] ; Rise       ; xbeegpsswitch_inst_one|XbeeRx[0]|datac         ;
++--------+--------------+----------------+------------------+------------------+------------+------------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Setup Times                                                                  ;
++-----------+------------------+-------+-------+------------+------------------+
+; Data Port ; Clock Port       ; Rise  ; Fall  ; Clock Edge ; Clock Reference  ;
++-----------+------------------+-------+-------+------------+------------------+
+; RPITx[*]  ; XbeeGpsSelect[0] ; 0.275 ; 0.434 ; Rise       ; XbeeGpsSelect[0] ;
+;  RPITx[0] ; XbeeGpsSelect[0] ; 0.275 ; 0.434 ; Rise       ; XbeeGpsSelect[0] ;
+; RPITx[*]  ; XbeeGpsSelect[0] ; 0.097 ; 0.244 ; Fall       ; XbeeGpsSelect[0] ;
+;  RPITx[0] ; XbeeGpsSelect[0] ; 0.097 ; 0.244 ; Fall       ; XbeeGpsSelect[0] ;
++-----------+------------------+-------+-------+------------+------------------+
+
+
++------------------------------------------------------------------------------+
+; Hold Times                                                                   ;
++-----------+------------------+-------+-------+------------+------------------+
+; Data Port ; Clock Port       ; Rise  ; Fall  ; Clock Edge ; Clock Reference  ;
++-----------+------------------+-------+-------+------------+------------------+
+; RPITx[*]  ; XbeeGpsSelect[0] ; 0.431 ; 0.287 ; Rise       ; XbeeGpsSelect[0] ;
+;  RPITx[0] ; XbeeGpsSelect[0] ; 0.431 ; 0.287 ; Rise       ; XbeeGpsSelect[0] ;
+; RPITx[*]  ; XbeeGpsSelect[0] ; 0.594 ; 0.456 ; Fall       ; XbeeGpsSelect[0] ;
+;  RPITx[0] ; XbeeGpsSelect[0] ; 0.594 ; 0.456 ; Fall       ; XbeeGpsSelect[0] ;
++-----------+------------------+-------+-------+------------+------------------+
+
+
++-------------------------------------------------------------------------------+
+; Clock to Output Times                                                         ;
++------------+------------------+-------+-------+------------+------------------+
+; Data Port  ; Clock Port       ; Rise  ; Fall  ; Clock Edge ; Clock Reference  ;
++------------+------------------+-------+-------+------------+------------------+
+; GpsRx[*]   ; XbeeGpsSelect[0] ; 4.543 ; 4.533 ; Rise       ; XbeeGpsSelect[0] ;
+;  GpsRx[0]  ; XbeeGpsSelect[0] ; 4.543 ; 4.533 ; Rise       ; XbeeGpsSelect[0] ;
+; RPIRx[*]   ; XbeeGpsSelect[0] ; 5.716 ; 5.660 ; Rise       ; XbeeGpsSelect[0] ;
+;  RPIRx[0]  ; XbeeGpsSelect[0] ; 5.716 ; 5.660 ; Rise       ; XbeeGpsSelect[0] ;
+; RPIRx[*]   ; XbeeGpsSelect[0] ; 5.716 ; 5.660 ; Fall       ; XbeeGpsSelect[0] ;
+;  RPIRx[0]  ; XbeeGpsSelect[0] ; 5.716 ; 5.660 ; Fall       ; XbeeGpsSelect[0] ;
+; XbeeRx[*]  ; XbeeGpsSelect[0] ; 6.103 ; 6.108 ; Fall       ; XbeeGpsSelect[0] ;
+;  XbeeRx[0] ; XbeeGpsSelect[0] ; 6.103 ; 6.108 ; Fall       ; XbeeGpsSelect[0] ;
++------------+------------------+-------+-------+------------+------------------+
+
+
++-------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                 ;
++------------+------------------+-------+-------+------------+------------------+
+; Data Port  ; Clock Port       ; Rise  ; Fall  ; Clock Edge ; Clock Reference  ;
++------------+------------------+-------+-------+------------+------------------+
+; GpsRx[*]   ; XbeeGpsSelect[0] ; 4.393 ; 4.383 ; Rise       ; XbeeGpsSelect[0] ;
+;  GpsRx[0]  ; XbeeGpsSelect[0] ; 4.393 ; 4.383 ; Rise       ; XbeeGpsSelect[0] ;
+; RPIRx[*]   ; XbeeGpsSelect[0] ; 5.456 ; 5.327 ; Rise       ; XbeeGpsSelect[0] ;
+;  RPIRx[0]  ; XbeeGpsSelect[0] ; 5.456 ; 5.327 ; Rise       ; XbeeGpsSelect[0] ;
+; RPIRx[*]   ; XbeeGpsSelect[0] ; 5.456 ; 5.327 ; Fall       ; XbeeGpsSelect[0] ;
+;  RPIRx[0]  ; XbeeGpsSelect[0] ; 5.456 ; 5.327 ; Fall       ; XbeeGpsSelect[0] ;
+; XbeeRx[*]  ; XbeeGpsSelect[0] ; 5.943 ; 5.948 ; Fall       ; XbeeGpsSelect[0] ;
+;  XbeeRx[0] ; XbeeGpsSelect[0] ; 5.943 ; 5.948 ; Fall       ; XbeeGpsSelect[0] ;
++------------+------------------+-------+-------+------------+------------------+
+
+
++---------------------------------------------------------------------+
+; Propagation Delay                                                   ;
++-----------------+-------------------+-------+-------+-------+-------+
+; Input Port      ; Output Port       ; RR    ; RF    ; FR    ; FF    ;
++-----------------+-------------------+-------+-------+-------+-------+
+; GpsTx[0]        ; RPIRx[0]          ; 4.923 ;       ;       ; 4.957 ;
+; RPIAckAuto[0]   ; AileronOutput[0]  ; 5.875 ; 5.806 ; 6.202 ; 6.179 ;
+; RPIAckAuto[0]   ; ElevatorOutput[0] ; 6.134 ; 6.038 ; 6.465 ; 6.398 ;
+; RPIAckAuto[0]   ; PanOutput[0]      ; 6.208 ; 6.107 ; 6.534 ; 6.463 ;
+; RPIAckAuto[0]   ; RudderOutput[0]   ; 6.141 ; 6.045 ; 6.468 ; 6.401 ;
+; RPIAckAuto[0]   ; ThrottleOutput[0] ; 5.984 ; 5.897 ; 6.305 ; 6.248 ;
+; RPIAckAuto[0]   ; TiltOutput[0]     ; 6.205 ; 6.095 ; 6.531 ; 6.451 ;
+; RPIAckCruise[0] ; PanOutput[0]      ; 6.669 ; 6.643 ; 7.061 ; 6.896 ;
+; RPIAckCruise[0] ; RudderOutput[0]   ; 6.605 ; 6.584 ; 6.992 ; 6.832 ;
+; RPIAckCruise[0] ; ThrottleOutput[0] ; 6.471 ; 6.372 ; 6.766 ; 6.752 ;
+; RPIAckCruise[0] ; TiltOutput[0]     ; 6.664 ; 6.629 ; 7.052 ; 6.878 ;
+; Rec_Aileron[0]  ; AileronOutput[0]  ; 6.391 ;       ;       ; 6.647 ;
+; Rec_Elevator[0] ; ElevatorOutput[0] ; 6.634 ;       ;       ; 6.874 ;
+; Rec_Rudder[0]   ; PanOutput[0]      ; 6.296 ;       ;       ; 6.512 ;
+; Rec_Rudder[0]   ; RudderOutput[0]   ; 6.455 ;       ;       ; 6.697 ;
+; Rec_Throttle[0] ; ThrottleOutput[0] ; 5.874 ;       ;       ; 6.116 ;
+; Rec_Throttle[0] ; TiltOutput[0]     ; 6.095 ;       ;       ; 6.315 ;
+; SD_Aileron[0]   ; AileronOutput[0]  ; 6.199 ;       ;       ; 6.528 ;
+; SD_Elevator[0]  ; ElevatorOutput[0] ; 6.248 ;       ;       ; 6.464 ;
+; SD_Pan[0]       ; PanOutput[0]      ; 6.356 ;       ;       ; 6.595 ;
+; SD_Rudder[0]    ; RudderOutput[0]   ; 6.450 ;       ;       ; 6.649 ;
+; SD_Throttle[0]  ; ThrottleOutput[0] ; 6.291 ;       ;       ; 6.562 ;
+; SD_Tilt[0]      ; TiltOutput[0]     ; 6.699 ;       ;       ; 6.907 ;
+; XbeeTx[0]       ; RPIRx[0]          ; 6.788 ;       ;       ; 7.015 ;
++-----------------+-------------------+-------+-------+-------+-------+
+
+
++---------------------------------------------------------------------+
+; Minimum Propagation Delay                                           ;
++-----------------+-------------------+-------+-------+-------+-------+
+; Input Port      ; Output Port       ; RR    ; RF    ; FR    ; FF    ;
++-----------------+-------------------+-------+-------+-------+-------+
+; GpsTx[0]        ; RPIRx[0]          ; 4.762 ;       ;       ; 4.801 ;
+; RPIAckAuto[0]   ; AileronOutput[0]  ; 5.654 ; 5.597 ; 5.968 ; 5.942 ;
+; RPIAckAuto[0]   ; ElevatorOutput[0] ; 5.917 ; 5.824 ; 6.241 ; 6.176 ;
+; RPIAckAuto[0]   ; PanOutput[0]      ; 5.989 ; 5.891 ; 6.308 ; 6.238 ;
+; RPIAckAuto[0]   ; RudderOutput[0]   ; 5.924 ; 5.831 ; 6.244 ; 6.179 ;
+; RPIAckAuto[0]   ; ThrottleOutput[0] ; 5.774 ; 5.689 ; 6.089 ; 6.032 ;
+; RPIAckAuto[0]   ; TiltOutput[0]     ; 5.986 ; 5.879 ; 6.305 ; 6.226 ;
+; RPIAckCruise[0] ; PanOutput[0]      ; 6.431 ; 6.406 ; 6.813 ; 6.654 ;
+; RPIAckCruise[0] ; RudderOutput[0]   ; 6.370 ; 6.350 ; 6.747 ; 6.593 ;
+; RPIAckCruise[0] ; ThrottleOutput[0] ; 6.243 ; 6.146 ; 6.531 ; 6.516 ;
+; RPIAckCruise[0] ; TiltOutput[0]     ; 6.427 ; 6.393 ; 6.805 ; 6.637 ;
+; Rec_Aileron[0]  ; AileronOutput[0]  ; 6.164 ;       ;       ; 6.417 ;
+; Rec_Elevator[0] ; ElevatorOutput[0] ; 6.338 ;       ;       ; 6.563 ;
+; Rec_Rudder[0]   ; PanOutput[0]      ; 6.072 ;       ;       ; 6.286 ;
+; Rec_Rudder[0]   ; RudderOutput[0]   ; 6.182 ;       ;       ; 6.408 ;
+; Rec_Throttle[0] ; ThrottleOutput[0] ; 5.668 ;       ;       ; 5.907 ;
+; Rec_Throttle[0] ; TiltOutput[0]     ; 5.881 ;       ;       ; 6.097 ;
+; SD_Aileron[0]   ; AileronOutput[0]  ; 5.977 ;       ;       ; 6.300 ;
+; SD_Elevator[0]  ; ElevatorOutput[0] ; 6.027 ;       ;       ; 6.240 ;
+; SD_Pan[0]       ; PanOutput[0]      ; 6.076 ;       ;       ; 6.306 ;
+; SD_Rudder[0]    ; RudderOutput[0]   ; 6.221 ;       ;       ; 6.418 ;
+; SD_Throttle[0]  ; ThrottleOutput[0] ; 6.024 ;       ;       ; 6.258 ;
+; SD_Tilt[0]      ; TiltOutput[0]     ; 6.406 ;       ;       ; 6.606 ;
+; XbeeTx[0]       ; RPIRx[0]          ; 6.509 ;       ;       ; 6.719 ;
++-----------------+-------------------+-------+-------+-------+-------+
+
+
+---------------------------------------------
+; Slow 1200mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
+--------------------------------------
+; Fast 1200mV 0C Model Setup Summary ;
+--------------------------------------
+No paths to report.
+
+
+-------------------------------------
+; Fast 1200mV 0C Model Hold Summary ;
+-------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++------------------+--------+----------------------+
+; Clock            ; Slack  ; End Point TNS        ;
++------------------+--------+----------------------+
+; XbeeGpsSelect[0] ; -3.000 ; -3.000               ;
++------------------+--------+----------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width: 'XbeeGpsSelect[0]'                                                                               ;
++--------+--------------+----------------+------------------+------------------+------------+------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock            ; Clock Edge ; Target                                         ;
++--------+--------------+----------------+------------------+------------------+------------+------------------------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; XbeeGpsSelect[0] ; Rise       ; XbeeGpsSelect[0]                               ;
+; 0.096  ; 0.096        ; 0.000          ; High Pulse Width ; XbeeGpsSelect[0] ; Fall       ; XbeeGpsSwitch:xbeegpsswitch_inst_one|XbeeRx[0] ;
+; 0.099  ; 0.099        ; 0.000          ; Low Pulse Width  ; XbeeGpsSelect[0] ; Rise       ; xbeegpsswitch_inst_one|GpsRx[0]|datac          ;
+; 0.099  ; 0.099        ; 0.000          ; Low Pulse Width  ; XbeeGpsSelect[0] ; Rise       ; xbeegpsswitch_inst_one|XbeeRx[0]|datac         ;
+; 0.103  ; 0.103        ; 0.000          ; Low Pulse Width  ; XbeeGpsSelect[0] ; Rise       ; XbeeGpsSwitch:xbeegpsswitch_inst_one|GpsRx[0]  ;
+; 0.120  ; 0.120        ; 0.000          ; Low Pulse Width  ; XbeeGpsSelect[0] ; Rise       ; XbeeGpsSelect[0]~input|o                       ;
+; 0.132  ; 0.132        ; 0.000          ; Low Pulse Width  ; XbeeGpsSelect[0] ; Rise       ; XbeeGpsSelect[0]~inputclkctrl|inclk[0]         ;
+; 0.132  ; 0.132        ; 0.000          ; Low Pulse Width  ; XbeeGpsSelect[0] ; Rise       ; XbeeGpsSelect[0]~inputclkctrl|outclk           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; XbeeGpsSelect[0] ; Rise       ; XbeeGpsSelect[0]~input|i                       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; XbeeGpsSelect[0] ; Rise       ; XbeeGpsSelect[0]~input|i                       ;
+; 0.867  ; 0.867        ; 0.000          ; High Pulse Width ; XbeeGpsSelect[0] ; Rise       ; XbeeGpsSelect[0]~inputclkctrl|inclk[0]         ;
+; 0.867  ; 0.867        ; 0.000          ; High Pulse Width ; XbeeGpsSelect[0] ; Rise       ; XbeeGpsSelect[0]~inputclkctrl|outclk           ;
+; 0.880  ; 0.880        ; 0.000          ; High Pulse Width ; XbeeGpsSelect[0] ; Rise       ; XbeeGpsSelect[0]~input|o                       ;
+; 0.896  ; 0.896        ; 0.000          ; High Pulse Width ; XbeeGpsSelect[0] ; Rise       ; XbeeGpsSwitch:xbeegpsswitch_inst_one|GpsRx[0]  ;
+; 0.900  ; 0.900        ; 0.000          ; High Pulse Width ; XbeeGpsSelect[0] ; Rise       ; xbeegpsswitch_inst_one|GpsRx[0]|datac          ;
+; 0.901  ; 0.901        ; 0.000          ; High Pulse Width ; XbeeGpsSelect[0] ; Rise       ; xbeegpsswitch_inst_one|XbeeRx[0]|datac         ;
+; 0.904  ; 0.904        ; 0.000          ; Low Pulse Width  ; XbeeGpsSelect[0] ; Fall       ; XbeeGpsSwitch:xbeegpsswitch_inst_one|XbeeRx[0] ;
++--------+--------------+----------------+------------------+------------------+------------+------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Setup Times                                                                   ;
++-----------+------------------+--------+-------+------------+------------------+
+; Data Port ; Clock Port       ; Rise   ; Fall  ; Clock Edge ; Clock Reference  ;
++-----------+------------------+--------+-------+------------+------------------+
+; RPITx[*]  ; XbeeGpsSelect[0] ; 0.148  ; 0.470 ; Rise       ; XbeeGpsSelect[0] ;
+;  RPITx[0] ; XbeeGpsSelect[0] ; 0.148  ; 0.470 ; Rise       ; XbeeGpsSelect[0] ;
+; RPITx[*]  ; XbeeGpsSelect[0] ; -0.276 ; 0.041 ; Fall       ; XbeeGpsSelect[0] ;
+;  RPITx[0] ; XbeeGpsSelect[0] ; -0.276 ; 0.041 ; Fall       ; XbeeGpsSelect[0] ;
++-----------+------------------+--------+-------+------------+------------------+
+
+
++-------------------------------------------------------------------------------+
+; Hold Times                                                                    ;
++-----------+------------------+-------+--------+------------+------------------+
+; Data Port ; Clock Port       ; Rise  ; Fall   ; Clock Edge ; Clock Reference  ;
++-----------+------------------+-------+--------+------------+------------------+
+; RPITx[*]  ; XbeeGpsSelect[0] ; 0.281 ; -0.031 ; Rise       ; XbeeGpsSelect[0] ;
+;  RPITx[0] ; XbeeGpsSelect[0] ; 0.281 ; -0.031 ; Rise       ; XbeeGpsSelect[0] ;
+; RPITx[*]  ; XbeeGpsSelect[0] ; 0.696 ; 0.387  ; Fall       ; XbeeGpsSelect[0] ;
+;  RPITx[0] ; XbeeGpsSelect[0] ; 0.696 ; 0.387  ; Fall       ; XbeeGpsSelect[0] ;
++-----------+------------------+-------+--------+------------+------------------+
+
+
++-------------------------------------------------------------------------------+
+; Clock to Output Times                                                         ;
++------------+------------------+-------+-------+------------+------------------+
+; Data Port  ; Clock Port       ; Rise  ; Fall  ; Clock Edge ; Clock Reference  ;
++------------+------------------+-------+-------+------------+------------------+
+; GpsRx[*]   ; XbeeGpsSelect[0] ; 2.977 ; 3.000 ; Rise       ; XbeeGpsSelect[0] ;
+;  GpsRx[0]  ; XbeeGpsSelect[0] ; 2.977 ; 3.000 ; Rise       ; XbeeGpsSelect[0] ;
+; RPIRx[*]   ; XbeeGpsSelect[0] ; 3.902 ; 4.010 ; Rise       ; XbeeGpsSelect[0] ;
+;  RPIRx[0]  ; XbeeGpsSelect[0] ; 3.902 ; 4.010 ; Rise       ; XbeeGpsSelect[0] ;
+; RPIRx[*]   ; XbeeGpsSelect[0] ; 3.902 ; 4.010 ; Fall       ; XbeeGpsSelect[0] ;
+;  RPIRx[0]  ; XbeeGpsSelect[0] ; 3.902 ; 4.010 ; Fall       ; XbeeGpsSelect[0] ;
+; XbeeRx[*]  ; XbeeGpsSelect[0] ; 4.479 ; 4.571 ; Fall       ; XbeeGpsSelect[0] ;
+;  XbeeRx[0] ; XbeeGpsSelect[0] ; 4.479 ; 4.571 ; Fall       ; XbeeGpsSelect[0] ;
++------------+------------------+-------+-------+------------+------------------+
+
+
++-------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                 ;
++------------+------------------+-------+-------+------------+------------------+
+; Data Port  ; Clock Port       ; Rise  ; Fall  ; Clock Edge ; Clock Reference  ;
++------------+------------------+-------+-------+------------+------------------+
+; GpsRx[*]   ; XbeeGpsSelect[0] ; 2.888 ; 2.910 ; Rise       ; XbeeGpsSelect[0] ;
+;  GpsRx[0]  ; XbeeGpsSelect[0] ; 2.888 ; 2.910 ; Rise       ; XbeeGpsSelect[0] ;
+; RPIRx[*]   ; XbeeGpsSelect[0] ; 3.567 ; 3.621 ; Rise       ; XbeeGpsSelect[0] ;
+;  RPIRx[0]  ; XbeeGpsSelect[0] ; 3.567 ; 3.621 ; Rise       ; XbeeGpsSelect[0] ;
+; RPIRx[*]   ; XbeeGpsSelect[0] ; 3.567 ; 3.621 ; Fall       ; XbeeGpsSelect[0] ;
+;  RPIRx[0]  ; XbeeGpsSelect[0] ; 3.567 ; 3.621 ; Fall       ; XbeeGpsSelect[0] ;
+; XbeeRx[*]  ; XbeeGpsSelect[0] ; 4.382 ; 4.473 ; Fall       ; XbeeGpsSelect[0] ;
+;  XbeeRx[0] ; XbeeGpsSelect[0] ; 4.382 ; 4.473 ; Fall       ; XbeeGpsSelect[0] ;
++------------+------------------+-------+-------+------------+------------------+
+
+
++---------------------------------------------------------------------+
+; Propagation Delay                                                   ;
++-----------------+-------------------+-------+-------+-------+-------+
+; Input Port      ; Output Port       ; RR    ; RF    ; FR    ; FF    ;
++-----------------+-------------------+-------+-------+-------+-------+
+; GpsTx[0]        ; RPIRx[0]          ; 3.148 ;       ;       ; 3.515 ;
+; RPIAckAuto[0]   ; AileronOutput[0]  ; 3.861 ; 3.871 ; 4.431 ; 4.461 ;
+; RPIAckAuto[0]   ; ElevatorOutput[0] ; 4.003 ; 4.038 ; 4.559 ; 4.613 ;
+; RPIAckAuto[0]   ; PanOutput[0]      ; 4.047 ; 4.093 ; 4.602 ; 4.667 ;
+; RPIAckAuto[0]   ; RudderOutput[0]   ; 4.008 ; 4.046 ; 4.564 ; 4.621 ;
+; RPIAckAuto[0]   ; ThrottleOutput[0] ; 3.917 ; 3.945 ; 4.472 ; 4.519 ;
+; RPIAckAuto[0]   ; TiltOutput[0]     ; 4.041 ; 4.087 ; 4.596 ; 4.661 ;
+; RPIAckCruise[0] ; PanOutput[0]      ; 4.322 ; 4.415 ; 4.962 ; 4.959 ;
+; RPIAckCruise[0] ; RudderOutput[0]   ; 4.285 ; 4.371 ; 4.925 ; 4.915 ;
+; RPIAckCruise[0] ; ThrottleOutput[0] ; 4.212 ; 4.222 ; 4.787 ; 4.854 ;
+; RPIAckCruise[0] ; TiltOutput[0]     ; 4.312 ; 4.405 ; 4.953 ; 4.950 ;
+; Rec_Aileron[0]  ; AileronOutput[0]  ; 4.166 ;       ;       ; 4.810 ;
+; Rec_Elevator[0] ; ElevatorOutput[0] ; 4.295 ;       ;       ; 4.937 ;
+; Rec_Rudder[0]   ; PanOutput[0]      ; 4.094 ;       ;       ; 4.712 ;
+; Rec_Rudder[0]   ; RudderOutput[0]   ; 4.198 ;       ;       ; 4.820 ;
+; Rec_Throttle[0] ; ThrottleOutput[0] ; 3.845 ;       ;       ; 4.434 ;
+; Rec_Throttle[0] ; TiltOutput[0]     ; 3.968 ;       ;       ; 4.575 ;
+; SD_Aileron[0]   ; AileronOutput[0]  ; 4.047 ;       ;       ; 4.697 ;
+; SD_Elevator[0]  ; ElevatorOutput[0] ; 4.057 ;       ;       ; 4.671 ;
+; SD_Pan[0]       ; PanOutput[0]      ; 4.130 ;       ;       ; 4.750 ;
+; SD_Rudder[0]    ; RudderOutput[0]   ; 4.185 ;       ;       ; 4.808 ;
+; SD_Throttle[0]  ; ThrottleOutput[0] ; 4.100 ;       ;       ; 4.735 ;
+; SD_Tilt[0]      ; TiltOutput[0]     ; 4.333 ;       ;       ; 4.970 ;
+; XbeeTx[0]       ; RPIRx[0]          ; 4.367 ;       ;       ; 5.045 ;
++-----------------+-------------------+-------+-------+-------+-------+
+
+
++---------------------------------------------------------------------+
+; Minimum Propagation Delay                                           ;
++-----------------+-------------------+-------+-------+-------+-------+
+; Input Port      ; Output Port       ; RR    ; RF    ; FR    ; FF    ;
++-----------------+-------------------+-------+-------+-------+-------+
+; GpsTx[0]        ; RPIRx[0]          ; 3.053 ;       ;       ; 3.422 ;
+; RPIAckAuto[0]   ; AileronOutput[0]  ; 3.725 ; 3.732 ; 4.278 ; 4.309 ;
+; RPIAckAuto[0]   ; ElevatorOutput[0] ; 3.868 ; 3.902 ; 4.416 ; 4.469 ;
+; RPIAckAuto[0]   ; PanOutput[0]      ; 3.910 ; 3.954 ; 4.458 ; 4.521 ;
+; RPIAckAuto[0]   ; RudderOutput[0]   ; 3.873 ; 3.910 ; 4.421 ; 4.477 ;
+; RPIAckAuto[0]   ; ThrottleOutput[0] ; 3.786 ; 3.813 ; 4.333 ; 4.379 ;
+; RPIAckAuto[0]   ; TiltOutput[0]     ; 3.904 ; 3.948 ; 4.452 ; 4.515 ;
+; RPIAckCruise[0] ; PanOutput[0]      ; 4.175 ; 4.263 ; 4.803 ; 4.801 ;
+; RPIAckCruise[0] ; RudderOutput[0]   ; 4.139 ; 4.221 ; 4.767 ; 4.759 ;
+; RPIAckCruise[0] ; ThrottleOutput[0] ; 4.069 ; 4.079 ; 4.635 ; 4.699 ;
+; RPIAckCruise[0] ; TiltOutput[0]     ; 4.165 ; 4.253 ; 4.794 ; 4.792 ;
+; Rec_Aileron[0]  ; AileronOutput[0]  ; 4.024 ;       ;       ; 4.658 ;
+; Rec_Elevator[0] ; ElevatorOutput[0] ; 4.113 ;       ;       ; 4.737 ;
+; Rec_Rudder[0]   ; PanOutput[0]      ; 3.956 ;       ;       ; 4.565 ;
+; Rec_Rudder[0]   ; RudderOutput[0]   ; 4.027 ;       ;       ; 4.635 ;
+; Rec_Throttle[0] ; ThrottleOutput[0] ; 3.716 ;       ;       ; 4.298 ;
+; Rec_Throttle[0] ; TiltOutput[0]     ; 3.834 ;       ;       ; 4.432 ;
+; SD_Aileron[0]   ; AileronOutput[0]  ; 3.911 ;       ;       ; 4.549 ;
+; SD_Elevator[0]  ; ElevatorOutput[0] ; 3.919 ;       ;       ; 4.525 ;
+; SD_Pan[0]       ; PanOutput[0]      ; 3.957 ;       ;       ; 4.565 ;
+; SD_Rudder[0]    ; RudderOutput[0]   ; 4.043 ;       ;       ; 4.657 ;
+; SD_Throttle[0]  ; ThrottleOutput[0] ; 3.932 ;       ;       ; 4.537 ;
+; SD_Tilt[0]      ; TiltOutput[0]     ; 4.152 ;       ;       ; 4.776 ;
+; XbeeTx[0]       ; RPIRx[0]          ; 4.190 ;       ;       ; 4.857 ;
++-----------------+-------------------+-------+-------+-------+-------+
+
+
+---------------------------------------------
+; Fast 1200mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
++-----------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                         ;
++-------------------+-------+------+----------+---------+---------------------+
+; Clock             ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
++-------------------+-------+------+----------+---------+---------------------+
+; Worst-case Slack  ; N/A   ; N/A  ; N/A      ; N/A     ; -3.000              ;
+;  XbeeGpsSelect[0] ; N/A   ; N/A  ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS   ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; -3.0                ;
+;  XbeeGpsSelect[0] ; N/A   ; N/A  ; N/A      ; N/A     ; -3.000              ;
++-------------------+-------+------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------+
+; Setup Times                                                                  ;
++-----------+------------------+-------+-------+------------+------------------+
+; Data Port ; Clock Port       ; Rise  ; Fall  ; Clock Edge ; Clock Reference  ;
++-----------+------------------+-------+-------+------------+------------------+
+; RPITx[*]  ; XbeeGpsSelect[0] ; 0.286 ; 0.470 ; Rise       ; XbeeGpsSelect[0] ;
+;  RPITx[0] ; XbeeGpsSelect[0] ; 0.286 ; 0.470 ; Rise       ; XbeeGpsSelect[0] ;
+; RPITx[*]  ; XbeeGpsSelect[0] ; 0.097 ; 0.244 ; Fall       ; XbeeGpsSelect[0] ;
+;  RPITx[0] ; XbeeGpsSelect[0] ; 0.097 ; 0.244 ; Fall       ; XbeeGpsSelect[0] ;
++-----------+------------------+-------+-------+------------+------------------+
+
+
++------------------------------------------------------------------------------+
+; Hold Times                                                                   ;
++-----------+------------------+-------+-------+------------+------------------+
+; Data Port ; Clock Port       ; Rise  ; Fall  ; Clock Edge ; Clock Reference  ;
++-----------+------------------+-------+-------+------------+------------------+
+; RPITx[*]  ; XbeeGpsSelect[0] ; 0.495 ; 0.363 ; Rise       ; XbeeGpsSelect[0] ;
+;  RPITx[0] ; XbeeGpsSelect[0] ; 0.495 ; 0.363 ; Rise       ; XbeeGpsSelect[0] ;
+; RPITx[*]  ; XbeeGpsSelect[0] ; 0.696 ; 0.561 ; Fall       ; XbeeGpsSelect[0] ;
+;  RPITx[0] ; XbeeGpsSelect[0] ; 0.696 ; 0.561 ; Fall       ; XbeeGpsSelect[0] ;
++-----------+------------------+-------+-------+------------+------------------+
+
+
++-------------------------------------------------------------------------------+
+; Clock to Output Times                                                         ;
++------------+------------------+-------+-------+------------+------------------+
+; Data Port  ; Clock Port       ; Rise  ; Fall  ; Clock Edge ; Clock Reference  ;
++------------+------------------+-------+-------+------------+------------------+
+; GpsRx[*]   ; XbeeGpsSelect[0] ; 5.099 ; 5.085 ; Rise       ; XbeeGpsSelect[0] ;
+;  GpsRx[0]  ; XbeeGpsSelect[0] ; 5.099 ; 5.085 ; Rise       ; XbeeGpsSelect[0] ;
+; RPIRx[*]   ; XbeeGpsSelect[0] ; 6.278 ; 6.276 ; Rise       ; XbeeGpsSelect[0] ;
+;  RPIRx[0]  ; XbeeGpsSelect[0] ; 6.278 ; 6.276 ; Rise       ; XbeeGpsSelect[0] ;
+; RPIRx[*]   ; XbeeGpsSelect[0] ; 6.278 ; 6.276 ; Fall       ; XbeeGpsSelect[0] ;
+;  RPIRx[0]  ; XbeeGpsSelect[0] ; 6.278 ; 6.276 ; Fall       ; XbeeGpsSelect[0] ;
+; XbeeRx[*]  ; XbeeGpsSelect[0] ; 6.848 ; 6.908 ; Fall       ; XbeeGpsSelect[0] ;
+;  XbeeRx[0] ; XbeeGpsSelect[0] ; 6.848 ; 6.908 ; Fall       ; XbeeGpsSelect[0] ;
++------------+------------------+-------+-------+------------+------------------+
+
+
++-------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                 ;
++------------+------------------+-------+-------+------------+------------------+
+; Data Port  ; Clock Port       ; Rise  ; Fall  ; Clock Edge ; Clock Reference  ;
++------------+------------------+-------+-------+------------+------------------+
+; GpsRx[*]   ; XbeeGpsSelect[0] ; 2.888 ; 2.910 ; Rise       ; XbeeGpsSelect[0] ;
+;  GpsRx[0]  ; XbeeGpsSelect[0] ; 2.888 ; 2.910 ; Rise       ; XbeeGpsSelect[0] ;
+; RPIRx[*]   ; XbeeGpsSelect[0] ; 3.567 ; 3.621 ; Rise       ; XbeeGpsSelect[0] ;
+;  RPIRx[0]  ; XbeeGpsSelect[0] ; 3.567 ; 3.621 ; Rise       ; XbeeGpsSelect[0] ;
+; RPIRx[*]   ; XbeeGpsSelect[0] ; 3.567 ; 3.621 ; Fall       ; XbeeGpsSelect[0] ;
+;  RPIRx[0]  ; XbeeGpsSelect[0] ; 3.567 ; 3.621 ; Fall       ; XbeeGpsSelect[0] ;
+; XbeeRx[*]  ; XbeeGpsSelect[0] ; 4.382 ; 4.473 ; Fall       ; XbeeGpsSelect[0] ;
+;  XbeeRx[0] ; XbeeGpsSelect[0] ; 4.382 ; 4.473 ; Fall       ; XbeeGpsSelect[0] ;
++------------+------------------+-------+-------+------------+------------------+
+
+
++---------------------------------------------------------------------+
+; Progagation Delay                                                   ;
++-----------------+-------------------+-------+-------+-------+-------+
+; Input Port      ; Output Port       ; RR    ; RF    ; FR    ; FF    ;
++-----------------+-------------------+-------+-------+-------+-------+
+; GpsTx[0]        ; RPIRx[0]          ; 5.440 ;       ;       ; 5.503 ;
+; RPIAckAuto[0]   ; AileronOutput[0]  ; 6.666 ; 6.599 ; 7.084 ; 7.060 ;
+; RPIAckAuto[0]   ; ElevatorOutput[0] ; 6.932 ; 6.858 ; 7.342 ; 7.301 ;
+; RPIAckAuto[0]   ; PanOutput[0]      ; 7.023 ; 6.948 ; 7.428 ; 7.385 ;
+; RPIAckAuto[0]   ; RudderOutput[0]   ; 6.950 ; 6.869 ; 7.357 ; 7.309 ;
+; RPIAckAuto[0]   ; ThrottleOutput[0] ; 6.776 ; 6.701 ; 7.176 ; 7.133 ;
+; RPIAckAuto[0]   ; TiltOutput[0]     ; 7.014 ; 6.925 ; 7.418 ; 7.361 ;
+; RPIAckCruise[0] ; PanOutput[0]      ; 7.523 ; 7.533 ; 8.018 ; 7.870 ;
+; RPIAckCruise[0] ; RudderOutput[0]   ; 7.454 ; 7.459 ; 7.946 ; 7.793 ;
+; RPIAckCruise[0] ; ThrottleOutput[0] ; 7.309 ; 7.214 ; 7.694 ; 7.698 ;
+; RPIAckCruise[0] ; TiltOutput[0]     ; 7.511 ; 7.507 ; 8.003 ; 7.841 ;
+; Rec_Aileron[0]  ; AileronOutput[0]  ; 7.203 ;       ;       ; 7.589 ;
+; Rec_Elevator[0] ; ElevatorOutput[0] ; 7.468 ;       ;       ; 7.841 ;
+; Rec_Rudder[0]   ; PanOutput[0]      ; 7.103 ;       ;       ; 7.441 ;
+; Rec_Rudder[0]   ; RudderOutput[0]   ; 7.284 ;       ;       ; 7.642 ;
+; Rec_Throttle[0] ; ThrottleOutput[0] ; 6.652 ;       ;       ; 6.987 ;
+; Rec_Throttle[0] ; TiltOutput[0]     ; 6.890 ;       ;       ; 7.211 ;
+; SD_Aileron[0]   ; AileronOutput[0]  ; 7.002 ;       ;       ; 7.443 ;
+; SD_Elevator[0]  ; ElevatorOutput[0] ; 7.051 ;       ;       ; 7.374 ;
+; SD_Pan[0]       ; PanOutput[0]      ; 7.183 ;       ;       ; 7.534 ;
+; SD_Rudder[0]    ; RudderOutput[0]   ; 7.273 ;       ;       ; 7.587 ;
+; SD_Throttle[0]  ; ThrottleOutput[0] ; 7.096 ;       ;       ; 7.494 ;
+; SD_Tilt[0]      ; TiltOutput[0]     ; 7.551 ;       ;       ; 7.876 ;
+; XbeeTx[0]       ; RPIRx[0]          ; 7.627 ;       ;       ; 7.995 ;
++-----------------+-------------------+-------+-------+-------+-------+
+
+
++---------------------------------------------------------------------+
+; Minimum Progagation Delay                                           ;
++-----------------+-------------------+-------+-------+-------+-------+
+; Input Port      ; Output Port       ; RR    ; RF    ; FR    ; FF    ;
++-----------------+-------------------+-------+-------+-------+-------+
+; GpsTx[0]        ; RPIRx[0]          ; 3.053 ;       ;       ; 3.422 ;
+; RPIAckAuto[0]   ; AileronOutput[0]  ; 3.725 ; 3.732 ; 4.278 ; 4.309 ;
+; RPIAckAuto[0]   ; ElevatorOutput[0] ; 3.868 ; 3.902 ; 4.416 ; 4.469 ;
+; RPIAckAuto[0]   ; PanOutput[0]      ; 3.910 ; 3.954 ; 4.458 ; 4.521 ;
+; RPIAckAuto[0]   ; RudderOutput[0]   ; 3.873 ; 3.910 ; 4.421 ; 4.477 ;
+; RPIAckAuto[0]   ; ThrottleOutput[0] ; 3.786 ; 3.813 ; 4.333 ; 4.379 ;
+; RPIAckAuto[0]   ; TiltOutput[0]     ; 3.904 ; 3.948 ; 4.452 ; 4.515 ;
+; RPIAckCruise[0] ; PanOutput[0]      ; 4.175 ; 4.263 ; 4.803 ; 4.801 ;
+; RPIAckCruise[0] ; RudderOutput[0]   ; 4.139 ; 4.221 ; 4.767 ; 4.759 ;
+; RPIAckCruise[0] ; ThrottleOutput[0] ; 4.069 ; 4.079 ; 4.635 ; 4.699 ;
+; RPIAckCruise[0] ; TiltOutput[0]     ; 4.165 ; 4.253 ; 4.794 ; 4.792 ;
+; Rec_Aileron[0]  ; AileronOutput[0]  ; 4.024 ;       ;       ; 4.658 ;
+; Rec_Elevator[0] ; ElevatorOutput[0] ; 4.113 ;       ;       ; 4.737 ;
+; Rec_Rudder[0]   ; PanOutput[0]      ; 3.956 ;       ;       ; 4.565 ;
+; Rec_Rudder[0]   ; RudderOutput[0]   ; 4.027 ;       ;       ; 4.635 ;
+; Rec_Throttle[0] ; ThrottleOutput[0] ; 3.716 ;       ;       ; 4.298 ;
+; Rec_Throttle[0] ; TiltOutput[0]     ; 3.834 ;       ;       ; 4.432 ;
+; SD_Aileron[0]   ; AileronOutput[0]  ; 3.911 ;       ;       ; 4.549 ;
+; SD_Elevator[0]  ; ElevatorOutput[0] ; 3.919 ;       ;       ; 4.525 ;
+; SD_Pan[0]       ; PanOutput[0]      ; 3.957 ;       ;       ; 4.565 ;
+; SD_Rudder[0]    ; RudderOutput[0]   ; 4.043 ;       ;       ; 4.657 ;
+; SD_Throttle[0]  ; ThrottleOutput[0] ; 3.932 ;       ;       ; 4.537 ;
+; SD_Tilt[0]      ; TiltOutput[0]     ; 4.152 ;       ;       ; 4.776 ;
+; XbeeTx[0]       ; RPIRx[0]          ; 4.190 ;       ;       ; 4.857 ;
++-----------------+-------------------+-------+-------+-------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                        ;
++-------------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin               ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++-------------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; RudderOutput[0]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ElevatorOutput[0] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; AileronOutput[0]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ThrottleOutput[0] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; PanOutput[0]      ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; TiltOutput[0]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; RPIReqCruise[0]   ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; RPIReqAuto[0]     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; RPIRx[0]          ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; GpsRx[0]          ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; XbeeRx[0]         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~     ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++-------------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; AUXONE[0]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; AUXTWO[0]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SD_Rudder[0]            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Rec_Rudder[0]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; RPIAckCruise[0]         ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; RPIAckAuto[0]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SD_Elevator[0]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Rec_Elevator[0]         ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SD_Aileron[0]           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Rec_Aileron[0]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SD_Throttle[0]          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; Rec_Throttle[0]         ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SD_Pan[0]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SD_Tilt[0]              ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; XbeeTx[0]               ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; GpsTx[0]                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; XbeeGpsSelect[0]        ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; RPITx[0]                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ;
++-------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin               ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++-------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; RudderOutput[0]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.95e-09 V                   ; 2.38 V              ; -0.016 V            ; 0.22 V                               ; 0.025 V                              ; 3.06e-10 s                  ; 3.3e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 5.95e-09 V                  ; 2.38 V             ; -0.016 V           ; 0.22 V                              ; 0.025 V                             ; 3.06e-10 s                 ; 3.3e-10 s                  ; Yes                       ; Yes                       ;
+; ElevatorOutput[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.95e-09 V                   ; 2.38 V              ; -0.016 V            ; 0.22 V                               ; 0.025 V                              ; 3.06e-10 s                  ; 3.3e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 5.95e-09 V                  ; 2.38 V             ; -0.016 V           ; 0.22 V                              ; 0.025 V                             ; 3.06e-10 s                 ; 3.3e-10 s                  ; Yes                       ; Yes                       ;
+; AileronOutput[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.95e-09 V                   ; 2.38 V              ; -0.016 V            ; 0.22 V                               ; 0.025 V                              ; 3.06e-10 s                  ; 3.3e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 5.95e-09 V                  ; 2.38 V             ; -0.016 V           ; 0.22 V                              ; 0.025 V                             ; 3.06e-10 s                 ; 3.3e-10 s                  ; Yes                       ; Yes                       ;
+; ThrottleOutput[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.95e-09 V                   ; 2.38 V              ; -0.016 V            ; 0.22 V                               ; 0.025 V                              ; 3.06e-10 s                  ; 3.3e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 5.95e-09 V                  ; 2.38 V             ; -0.016 V           ; 0.22 V                              ; 0.025 V                             ; 3.06e-10 s                 ; 3.3e-10 s                  ; Yes                       ; Yes                       ;
+; PanOutput[0]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.95e-09 V                   ; 2.38 V              ; -0.016 V            ; 0.22 V                               ; 0.025 V                              ; 3.06e-10 s                  ; 3.3e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 5.95e-09 V                  ; 2.38 V             ; -0.016 V           ; 0.22 V                              ; 0.025 V                             ; 3.06e-10 s                 ; 3.3e-10 s                  ; Yes                       ; Yes                       ;
+; TiltOutput[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.95e-09 V                   ; 2.38 V              ; -0.016 V            ; 0.22 V                               ; 0.025 V                              ; 3.06e-10 s                  ; 3.3e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 5.95e-09 V                  ; 2.38 V             ; -0.016 V           ; 0.22 V                              ; 0.025 V                             ; 3.06e-10 s                 ; 3.3e-10 s                  ; Yes                       ; Yes                       ;
+; RPIReqCruise[0]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.95e-09 V                   ; 2.38 V              ; -0.016 V            ; 0.22 V                               ; 0.025 V                              ; 3.06e-10 s                  ; 3.3e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 5.95e-09 V                  ; 2.38 V             ; -0.016 V           ; 0.22 V                              ; 0.025 V                             ; 3.06e-10 s                 ; 3.3e-10 s                  ; Yes                       ; Yes                       ;
+; RPIReqAuto[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.95e-09 V                   ; 2.38 V              ; -0.016 V            ; 0.22 V                               ; 0.025 V                              ; 3.06e-10 s                  ; 3.3e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 5.95e-09 V                  ; 2.38 V             ; -0.016 V           ; 0.22 V                              ; 0.025 V                             ; 3.06e-10 s                 ; 3.3e-10 s                  ; Yes                       ; Yes                       ;
+; RPIRx[0]          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.44e-09 V                   ; 2.38 V              ; -0.0145 V           ; 0.169 V                              ; 0.026 V                              ; 4.83e-10 s                  ; 4.71e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.44e-09 V                  ; 2.38 V             ; -0.0145 V          ; 0.169 V                             ; 0.026 V                             ; 4.83e-10 s                 ; 4.71e-10 s                 ; Yes                       ; Yes                       ;
+; GpsRx[0]          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.44e-09 V                   ; 2.39 V              ; -0.0265 V           ; 0.2 V                                ; 0.033 V                              ; 2.94e-10 s                  ; 3.12e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.44e-09 V                  ; 2.39 V             ; -0.0265 V          ; 0.2 V                               ; 0.033 V                             ; 2.94e-10 s                 ; 3.12e-10 s                 ; Yes                       ; Yes                       ;
+; XbeeRx[0]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.44e-09 V                   ; 2.33 V              ; -0.00624 V          ; 0.185 V                              ; 0.097 V                              ; 2.82e-09 s                  ; 2.56e-09 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.44e-09 V                  ; 2.33 V             ; -0.00624 V         ; 0.185 V                             ; 0.097 V                             ; 2.82e-09 s                 ; 2.56e-09 s                 ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.45e-09 V                   ; 2.38 V              ; -0.0609 V           ; 0.148 V                              ; 0.095 V                              ; 2.82e-10 s                  ; 2.59e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.45e-09 V                  ; 2.38 V             ; -0.0609 V          ; 0.148 V                             ; 0.095 V                             ; 2.82e-10 s                 ; 2.59e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.61e-09 V                   ; 2.38 V              ; -0.00274 V          ; 0.141 V                              ; 0.006 V                              ; 4.7e-10 s                   ; 6.02e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.61e-09 V                  ; 2.38 V             ; -0.00274 V         ; 0.141 V                             ; 0.006 V                             ; 4.7e-10 s                  ; 6.02e-10 s                 ; Yes                       ; Yes                       ;
++-------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ;
++-------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin               ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++-------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; RudderOutput[0]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.06e-06 V                   ; 2.36 V              ; -0.00724 V          ; 0.107 V                              ; 0.02 V                               ; 4.5e-10 s                   ; 4.25e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.06e-06 V                  ; 2.36 V             ; -0.00724 V         ; 0.107 V                             ; 0.02 V                              ; 4.5e-10 s                  ; 4.25e-10 s                 ; Yes                       ; Yes                       ;
+; ElevatorOutput[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.06e-06 V                   ; 2.36 V              ; -0.00724 V          ; 0.107 V                              ; 0.02 V                               ; 4.5e-10 s                   ; 4.25e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.06e-06 V                  ; 2.36 V             ; -0.00724 V         ; 0.107 V                             ; 0.02 V                              ; 4.5e-10 s                  ; 4.25e-10 s                 ; Yes                       ; Yes                       ;
+; AileronOutput[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.06e-06 V                   ; 2.36 V              ; -0.00724 V          ; 0.107 V                              ; 0.02 V                               ; 4.5e-10 s                   ; 4.25e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.06e-06 V                  ; 2.36 V             ; -0.00724 V         ; 0.107 V                             ; 0.02 V                              ; 4.5e-10 s                  ; 4.25e-10 s                 ; Yes                       ; Yes                       ;
+; ThrottleOutput[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.06e-06 V                   ; 2.36 V              ; -0.00724 V          ; 0.107 V                              ; 0.02 V                               ; 4.5e-10 s                   ; 4.25e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.06e-06 V                  ; 2.36 V             ; -0.00724 V         ; 0.107 V                             ; 0.02 V                              ; 4.5e-10 s                  ; 4.25e-10 s                 ; Yes                       ; Yes                       ;
+; PanOutput[0]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.06e-06 V                   ; 2.36 V              ; -0.00724 V          ; 0.107 V                              ; 0.02 V                               ; 4.5e-10 s                   ; 4.25e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.06e-06 V                  ; 2.36 V             ; -0.00724 V         ; 0.107 V                             ; 0.02 V                              ; 4.5e-10 s                  ; 4.25e-10 s                 ; Yes                       ; Yes                       ;
+; TiltOutput[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.06e-06 V                   ; 2.36 V              ; -0.00724 V          ; 0.107 V                              ; 0.02 V                               ; 4.5e-10 s                   ; 4.25e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.06e-06 V                  ; 2.36 V             ; -0.00724 V         ; 0.107 V                             ; 0.02 V                              ; 4.5e-10 s                  ; 4.25e-10 s                 ; Yes                       ; Yes                       ;
+; RPIReqCruise[0]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.06e-06 V                   ; 2.36 V              ; -0.00724 V          ; 0.107 V                              ; 0.02 V                               ; 4.5e-10 s                   ; 4.25e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.06e-06 V                  ; 2.36 V             ; -0.00724 V         ; 0.107 V                             ; 0.02 V                              ; 4.5e-10 s                  ; 4.25e-10 s                 ; Yes                       ; Yes                       ;
+; RPIReqAuto[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.06e-06 V                   ; 2.36 V              ; -0.00724 V          ; 0.107 V                              ; 0.02 V                               ; 4.5e-10 s                   ; 4.25e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.06e-06 V                  ; 2.36 V             ; -0.00724 V         ; 0.107 V                             ; 0.02 V                              ; 4.5e-10 s                  ; 4.25e-10 s                 ; Yes                       ; Yes                       ;
+; RPIRx[0]          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.16e-07 V                   ; 2.35 V              ; -0.00832 V          ; 0.101 V                              ; 0.024 V                              ; 6.39e-10 s                  ; 6e-10 s                     ; Yes                        ; Yes                        ; 2.32 V                      ; 7.16e-07 V                  ; 2.35 V             ; -0.00832 V         ; 0.101 V                             ; 0.024 V                             ; 6.39e-10 s                 ; 6e-10 s                    ; Yes                       ; Yes                       ;
+; GpsRx[0]          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.16e-07 V                   ; 2.36 V              ; -0.00476 V          ; 0.096 V                              ; 0.013 V                              ; 4.39e-10 s                  ; 4.15e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.16e-07 V                  ; 2.36 V             ; -0.00476 V         ; 0.096 V                             ; 0.013 V                             ; 4.39e-10 s                 ; 4.15e-10 s                 ; Yes                       ; Yes                       ;
+; XbeeRx[0]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.16e-07 V                   ; 2.33 V              ; -0.00349 V          ; 0.163 V                              ; 0.074 V                              ; 3.33e-09 s                  ; 3.14e-09 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.16e-07 V                  ; 2.33 V             ; -0.00349 V         ; 0.163 V                             ; 0.074 V                             ; 3.33e-09 s                 ; 3.14e-09 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.74e-07 V                   ; 2.36 V              ; -0.0201 V           ; 0.072 V                              ; 0.033 V                              ; 4.04e-10 s                  ; 3.29e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 5.74e-07 V                  ; 2.36 V             ; -0.0201 V          ; 0.072 V                             ; 0.033 V                             ; 4.04e-10 s                 ; 3.29e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.45e-07 V                   ; 2.35 V              ; -0.00643 V          ; 0.081 V                              ; 0.031 V                              ; 5.31e-10 s                  ; 7.59e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.45e-07 V                  ; 2.35 V             ; -0.00643 V         ; 0.081 V                             ; 0.031 V                             ; 5.31e-10 s                 ; 7.59e-10 s                 ; Yes                       ; Yes                       ;
++-------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ;
++-------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin               ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++-------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; RudderOutput[0]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; ElevatorOutput[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; AileronOutput[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; ThrottleOutput[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; PanOutput[0]      ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; TiltOutput[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; RPIReqCruise[0]   ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; RPIReqAuto[0]     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; RPIRx[0]          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.71 V              ; -0.0317 V           ; 0.148 V                              ; 0.064 V                              ; 4.51e-10 s                  ; 4.15e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.71 V             ; -0.0317 V          ; 0.148 V                             ; 0.064 V                             ; 4.51e-10 s                 ; 4.15e-10 s                 ; No                        ; Yes                       ;
+; GpsRx[0]          ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.73 V              ; -0.0384 V           ; 0.169 V                              ; 0.089 V                              ; 2.7e-10 s                   ; 2.62e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.73 V             ; -0.0384 V          ; 0.169 V                             ; 0.089 V                             ; 2.7e-10 s                  ; 2.62e-10 s                 ; Yes                       ; Yes                       ;
+; XbeeRx[0]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.64 V              ; -0.0117 V           ; 0.202 V                              ; 0.176 V                              ; 2.38e-09 s                  ; 2.22e-09 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.64 V             ; -0.0117 V          ; 0.202 V                             ; 0.176 V                             ; 2.38e-09 s                 ; 2.22e-09 s                 ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~     ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
++-------------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
+-------------------
+; Clock Transfers ;
+-------------------
+Nothing to report.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 16    ; 16   ;
+; Unconstrained Input Port Paths  ; 27    ; 27   ;
+; Unconstrained Output Ports      ; 9     ; 9    ;
+; Unconstrained Output Port Paths ; 27    ; 27   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 32-bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Thu Mar 31 06:12:17 2016
+Info: Command: quartus_sta FlightControl -c FlightControl
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Core supply voltage is 1.2V
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Warning (335093): TimeQuest Timing Analyzer is analyzing 2 combinational loops as latches.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'FlightControl.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name XbeeGpsSelect[0] XbeeGpsSelect[0]
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.000        -3.000 XbeeGpsSelect[0] 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.000        -3.000 XbeeGpsSelect[0] 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -3.000        -3.000 XbeeGpsSelect[0] 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 32-bit TimeQuest Timing Analyzer was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 423 megabytes
+    Info: Processing ended: Thu Mar 31 06:12:24 2016
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:06
+
+
