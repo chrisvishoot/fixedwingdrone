@@ -45,4 +45,4 @@ while True:
     roll_angle = round(roll_angle * conv,2)
     yaw_angle = round(yaw_angle * conv,2)
     
-    print('Pitch: ' + str(pitch_angle) + '\t Roll: ' + str(roll_angle) + '\t Yaw: ' + str(yaw_angle))
+    print('Pitch: ' + str(pitch_angle) + '\t Roll: ' + str(roll_angle) + '\t Yaw: ' + str(yaw_angle)) + '\t Heading: ' + str(magz)

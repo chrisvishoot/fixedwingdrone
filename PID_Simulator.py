@@ -2,6 +2,7 @@
 from PID_Implementation import *
 
 import random
+import time
 #Steps for correcting the drone!
 # 1) Correct the Z axis
 # 2) Correct the radius length and the theta on the xy plane simulataniously
@@ -56,6 +57,8 @@ def simulation():
         currZ = correctZError(zError, currZ)
         zError = errorZPlane(currZ, endZ)
         print("My current z location is " + str(currZ))
+    	print("Z Error " + str(zError))
+	time.sleep(0.15)
     #prints out the should be corrected z value, for this case it should be 35.
     print (currZ)
 

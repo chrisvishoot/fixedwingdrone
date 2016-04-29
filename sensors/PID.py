@@ -86,45 +86,59 @@ class PID:
 def findMapping(pid, start1, end1, start2, end2):
     val1 = pid.update(start1)
     val2 = pid.update(end1)
-    
+
     x1 = start2 # Lower bound for mapped range
     x2 = end2 # Upper bound for mapped range
 
-    print val1, val2, x1, x2
+    #print val1, val2, x1, x2
 
     m = (x1 - x2) / (val1 - val2)
 
     b = x1 - (m * val1)
-    
-    print "b, m", b, m
+
+    #print "b, m", b, m
 
     return b, m
 
 def mapValue(value, b, m):
     return (value * m) + b
-    
+
 def getPitchYawRoll(Gyro, Accel):
     conv = 180 / math.pi
 
     (wx, wy, wz) = Gyro.Get_CalOut_Value()
+    #acceleration in the x, y and z
     [[ax, ay, az],[magx, magy, magz, orientation]] = Accel.read()
-    heading = (math.atan2(magy,magx)* 180)/ math.pi
+    #heading = (math.atan2(magy,magx)* 180)/ math.pi
     roll_angle = math.atan2(ay,az)
     pitch_in = -ax/((ay*math.sin(roll_angle)) + (az*math.cos(roll_angle)))
     pitch_angle = math.atan(pitch_in)
-    yaw_y = (magz*math.sin(roll_angle)) - (magy*math.cos(roll_angle))   
+    yaw_y = (magz*math.sin(roll_angle)) - (magy*math.cos(roll_angle))
     yaw_x = (magx*math.cos(pitch_angle)) + (magy*math.sin(pitch_angle)*math.sin(roll_angle)) + (magz*math.sin(pitch_angle)*math.cos(roll_angle))
     yaw_angle = math.atan2(yaw_y,yaw_x)
+    if(yaw_y > 0 and yaw_x < 0):
+        yaw_angle = yaw_angle + math.pi
+    elif(yaw_y < 0 and yaw_x < 0):
+        yaw_angle = yaw_angle + math.pi
+
+    heading = math.atan2(magz * math.sin(roll_angle) - magy*math.cos(roll_angle) ,
+    magx * math.cos(pitch_angle) + magy * math.sin(pitch_angle) * math.sin(roll_angle) + magz * math.sin(pitch_angle) * math.sin(roll_angle))
+    #(atan2(event.magnetic.y,event.magnetic.x) * 180) / Pi;
+    #heading = (math.atan2(magy,magx) * 180) / math.pi;
+
     pitch_angle = round(pitch_angle * conv,2)
     roll_angle = round(roll_angle * conv,2)
     yaw_angle = round(yaw_angle * conv,2)
-    
+    #yaw = 180 * atan (accelerationZ/sqrt(accelerationX*accelerationX + accelerationZ*accelerationZ))/M_PI;
+    yaw_angle = 180 * math.atan(az/math.sqrt(ax*ax + az*az))/math.pi;
+    heading = (heading * 180) / math.pi
+    #print yaw_angle
     return (pitch_angle, yaw_angle, roll_angle)
 
 in_min = -45
 in_max = 45
-out_min = 410
-out_max = 195
+out_min = 195
+out_max = 410
 
 def mapValue2(value):
     return (value - in_min) * (out_max - out_min) / (in_max - in_min) + out_min
@@ -152,32 +166,43 @@ if __name__ == '__main__':
 
     elevator = PWM(0x40)
     elevator.setPWMFreq(43)
-    
+
+    roll = PWM(0x40)
+    roll.setPWMFreq(43)
+
     elevatorUp = 195
     elevatorDown = 410
 
     elevatorPid = PID()
-    
+    rollPid = PID()
+
     pitch_angle, yaw_angle, roll_angle = getPitchYawRoll(Gyro, Accel)
-    
+
     elevatorPid.setPoint(pitch_angle)
-    
+    rollPid.setPoint(roll_angle)
     b, m = findMapping(elevatorPid, -90, 90, 410, 195)
 
     try:
         while True:
             pitch_angle, yaw_angle, roll_angle = getPitchYawRoll(Gyro, Accel)
-            
+
+            rollPidValue = rollPid.update(roll_angle)
             elevatorPidValue = elevatorPid.update(pitch_angle)
 
+
             print('Pitch: ' + str(pitch_angle) + '\tYaw: ' + str(yaw_angle) + '\tRoll: ' + str(roll_angle))
+            #print yaw_angle
             print "PID Elevator: ", elevatorPidValue
+            print "PID Roll: ", rollPidValue
 
             elevatorServoValue = int(restrictValues(mapValue2(elevatorPidValue)))
-            print "Elevator Servo Value: ", elevatorServoValue
-            
+            rollServoValue = int(restrictValues(mapValue2(rollPidValue)))
+            print "roll servo value ", rollServoValue
+            print "elevator Servo Value: ", elevatorServoValue
+
             elevator.setPWM(2, 0, elevatorServoValue)
-            
+            roll.setPWM(1, 0, rollServoValue)
+
     except KeyboardInterrupt:
-        print "Killing program"
+        #print "Killing program"
         time.sleep(1)
