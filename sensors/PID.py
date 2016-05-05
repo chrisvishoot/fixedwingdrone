@@ -4,6 +4,7 @@ import sys
 from L3GD20 import L3GD20
 from Adafruit_LSM303 import Adafruit_LSM303
 from Adafruit_PWM_Servo_Driver import PWM
+from heading import *
 import math
 
 class PID:
@@ -170,17 +171,25 @@ if __name__ == '__main__':
     roll = PWM(0x40)
     roll.setPWMFreq(43)
 
+    rudder = PWM(0x40)
+    rudder.setPWMFreq(43)
+
     elevatorUp = 195
     elevatorDown = 410
 
     elevatorPid = PID()
     rollPid = PID()
+    rudderPid = PID()
 
     pitch_angle, yaw_angle, roll_angle = getPitchYawRoll(Gyro, Accel)
 
     elevatorPid.setPoint(pitch_angle)
     rollPid.setPoint(roll_angle)
+    rudderPid.setPoint(0) #Change error to zero
     b, m = findMapping(elevatorPid, -90, 90, 410, 195)
+    A = (0.0, 0.0)
+    goal = (-34.0, 41.0) #goal point
+    currentHeading = 180
 
     try:
         while True:
@@ -189,7 +198,45 @@ if __name__ == '__main__':
             rollPidValue = rollPid.update(roll_angle)
             elevatorPidValue = elevatorPid.update(pitch_angle)
 
-
+            #A = currentLocation, goal = where to go, and currentHeading..yea..
+            # while (A[0] > -13):
+            #     error = getTargetHeadingOffset(A, goal, currentHeading)
+            #     A = (A[0] - 1, A[1])
+            #     print "Error ", error
+            #     print "Location ", A
+            #     rudderPidValue = rudderPid.update(error)
+            #     rudderServoValue = int(restrictValues(mapValue2(rudderPidValue)))
+            #     rudder.setPWM(3,0,rudderServoValue)
+            #     print "Rudder value ", rudderPidValue
+            #     print "Rudder servo value ", rudderServoValue
+            #     time.sleep(0.5)
+            # currentHeading = 104.405003855
+            # while (A[0] >= -23 and A[1] <= 41):
+            #     error = getTargetHeadingOffset(A, goal, currentHeading)
+            #     A = (A[0]- 0.25, A[1] + 1)
+            #     print "Error ", error
+            #     print "Location ", A
+            #     rudderPidValue = rudderPid.update(error)
+            #     rudderServoValue = int(restrictValues(mapValue2(rudderPidValue)))
+            #     rudder.setPWM(3,0,rudderServoValue)
+            #     print "Rudder value ", rudderPidValue
+            #     print "Rudder servo value ", rudderServoValue
+            #     time.sleep(0.5)
+            # currentHeading = 180
+            #
+            # while(A[0] >= -34):
+            #     error = getTargetHeadingOffset(A, goal, currentHeading)
+            #     A = (A[0]- 1, A[1])
+            #     print "Error ", error
+            #     print "Location ", A
+            #     rudderPidValue = rudderPid.update(error)
+            #     rudderServoValue = int(restrictValues(mapValue2(rudderPidValue)))
+            #     rudder.setPWM(3,0,rudderServoValue)
+            #     print "Rudder value ", rudderPidValue
+            #     print "Rudder servo value ", rudderServoValue
+            #     time.sleep(0.5)
+            # time.sleep(10)
+            break #this is just for testing purposes of the rudder
             print('Pitch: ' + str(pitch_angle) + '\tYaw: ' + str(yaw_angle) + '\tRoll: ' + str(roll_angle))
             #print yaw_angle
             print "PID Elevator: ", elevatorPidValue
