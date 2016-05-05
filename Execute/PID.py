@@ -185,7 +185,7 @@ if __name__ == '__main__':
 
     Accel = Adafruit_LSM303()
 
-    gpsp = GpsPoller() # create the thread
+    # gpsp = GpsPoller() # create the thread
 
     servoDriver = PWM(0x40)
     servoDriver.setPWMFreq(43)
