@@ -1,3 +1,4 @@
+from pinAssignments import *
 import numpy as np
 import time
 import sys
@@ -10,6 +11,62 @@ from gps import *
 from time import *
 import threading
 from heading import *
+
+
+#---------------------------------------------------------------
+# 						GPIO Aknowledge/Request
+#---------------------------------------------------------------
+
+
+#If both the auto and cc are false / off, then we will assume manual for our logic
+
+
+
+
+
+# Mode control variables
+auto_mode = False
+cc_mode = False
+
+# Pin set up
+GPIO.setwarnings(False)
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(cc_req_pin, GPIO.IN,pull_up_down=GPIO.PUD_DOWN)
+GPIO.setup(auto_req_pin, GPIO.IN,pull_up_down=GPIO.PUD_DOWN)
+GPIO.setup(cc_akn_pin, GPIO.OUT)
+GPIO.setup(auto_akn_pin, GPIO.OUT)
+
+def cc_req(channel):
+	print("Changing CC Mode")
+	if(GPIO.input(cc_req_pin)):
+		print("CC Mode on")
+		GPIO.output(cc_akn_pin,1)
+		cc_mode = True
+	else:
+		GPIO.output(cc_akn_pin,0)
+		print("CC Mode off")
+		cc_mode = False
+
+def auto_req(channel):
+
+	if(GPIO.input(auto_req_pin)):
+		print("Auto Mode on")
+		GPIO.output(auto_akn_pin,1)
+		auto_mode = True
+	else:
+		print("Auto Mode off")
+		GPIO.output(auto_akn_pin,0)
+		auto_mode = False
+
+
+
+GPIO.add_event_detect(cc_req_pin,GPIO.BOTH)
+GPIO.add_event_callback(cc_req_pin, cc_req)
+GPIO.add_event_detect(auto_req_pin,GPIO.BOTH)
+GPIO.add_event_callback(auto_req_pin, auto_req)
+
+
+
 
 class PID:
 	"""
@@ -88,26 +145,6 @@ class PID:
 	def getDerivator(self):
 		return self.Derivator
 
-def findMapping(pid, start1, end1, start2, end2):
-    val1 = pid.update(start1)
-    val2 = pid.update(end1)
-
-    x1 = start2 # Lower bound for mapped range
-    x2 = end2 # Upper bound for mapped range
-
-    #print val1, val2, x1, x2
-
-    m = (x1 - x2) / (val1 - val2)
-
-    b = x1 - (m * val1)
-
-    #print "b, m", b, m
-
-    return b, m
-
-def mapValue(value, b, m):
-    return (value * m) + b
-
 def getPitchYawRoll(Gyro, Accel):
     conv = 180 / math.pi
 
@@ -140,12 +177,9 @@ def getPitchYawRoll(Gyro, Accel):
     #print yaw_angle
     return (pitch_angle, yaw_angle, roll_angle)
 
-in_min = -45
-in_max = 45
-out_min = 195
-out_max = 410
 
-def mapValue2(value):
+
+def mapValue(value, in_min=-45, in_max=45, out_min=195, out_max=410):
     return (value - in_min) * (out_max - out_min) / (in_max - in_min) + out_min
 
 def restrictValues(value):
@@ -165,7 +199,7 @@ class GpsPoller(threading.Thread):
     gpsd = GPS(mode=WATCH_ENABLE) #starting the stream of info
     self.current_value = None
     self.running = True #setting the thread running to true
- 
+
   def run(self):
     global gpsd
     while gpsp.running:
@@ -175,6 +209,16 @@ class GpsPoller(threading.Thread):
             pass
 
 if __name__ == '__main__':
+
+    # cc_akn_pin = 24
+    # cc_req_pin = 23
+    # auto_akn_pin = 4
+    # auto_req_pin = 17
+    #
+    # # Mode control variables
+    # auto_mode = False
+    # cc_mode = False
+
     Gyro = L3GD20(busId = 1, slaveAddr = 0x6b, ifLog = False, ifWriteBlock=False)
     Gyro.Set_PowerMode("Normal")
     Gyro.Set_FullScale_Value("250dps")
@@ -198,36 +242,63 @@ if __name__ == '__main__':
     rollPid = PID()
     altitudePid = PID()
     rudderPid = PID()
+    throttlePid = PID()
 
     pitch_angle, yaw_angle, roll_angle = getPitchYawRoll(Gyro, Accel)
-        
+
     elevatorPid.setPoint(pitch_angle)
     rollPid.setPoint(roll_angle)
     rudderPid.setPoint(0) # Change 0 to "zero" for servo (value that's straight)
-    b, m = findMapping(elevatorPid, -90, 90, 410, 195)
+    throttlePid.setPoint(0) #Current throttle speed will be our normalization of the system.
+    #-90 means that the plane is going up, or above the horizon
+    # 90 means that the plane is going down, or below the horizon (relative to the current location of the plane)
+    #if -90, then increase the speed.
+
 
     try:
         while True:
             pitch_angle, yaw_angle, roll_angle = getPitchYawRoll(Gyro, Accel)
 
-            rollPidValue = rollPid.update(roll_angle)
-            altitudePidValue = altitudePid.update(gpsd.fix.altitude)
-            elevatorPid.setPoint(scaleAltitude(altitudePidValue))
-            elevatorPidValue = elevatorPid.update(pitch_angle)
+            if(auto_mode):
+                #FOR THE RUDDER PID ALGORITHM:
+                #We need the Xbee for the target location, and currently this is not implemented yet
+                #After Xbee is working, get the code from sensors / PID.py - sensors
 
-            print('Pitch: ' + str(pitch_angle) + '\tYaw: ' + str(yaw_angle) + '\tRoll: ' + str(roll_angle))
-            #print yaw_angle
-            print "PID Elevator: ", elevatorPidValue
-            print "PID Roll: ", rollPidValue
+                throttlePidValue = throttlePid.update(pitch_angle)
 
-            elevatorServoValue = int(restrictValues(mapValue2(elevatorPidValue)))
-            rollServoValue = int(restrictValues(mapValue2(rollPidValue)))
-            print "roll servo value ", rollServoValue
-            print "elevator Servo Value: ", elevatorServoValue
 
-            servoDriver.setPWM(2, 0, elevatorServoValue)
-            servoDriver.setPWM(1, 0, rollServoValue)
+                rollPidValue = rollPid.update(roll_angle)
+                altitudePidValue = altitudePid.update(gpsd.fix.altitude)
+                elevatorPid.setPoint(scaleAltitude(altitudePidValue))
+                elevatorPidValue = elevatorPid.update(pitch_angle)
 
+                print('Pitch: ' + str(pitch_angle) + '\tYaw: ' + str(yaw_angle) + '\tRoll: ' + str(roll_angle))
+                #print yaw_angle
+                print "PID Elevator: ", elevatorPidValue
+                print "PID Roll: ", rollPidValue
+
+                elevatorServoValue = int(restrictValues(mapValue(elevatorPidValue)))
+                #def mapValue(value, in_min=-45, in_max=45, out_min=195, out_max=410):
+                #throttle max = 400, min = 260
+
+                throttleServoValue = int(restrictValues(mapValue(throttlePidValue, -45, 45, 400, 260)))
+
+                rollServoValue = int(restrictValues(mapValue(rollPidValue)))
+                print "roll servo value ", rollServoValue
+                print "elevator Servo Value: ", elevatorServoValue
+
+                servoDriver.setPWM(elevator_channel, 0, elevatorServoValue)
+                servoDriver.setPWM(aileron_channel, 0, rollServoValue)
+                servoDriver.setPWM(throttle_channel, 0, throttleServoValue)
+            elif(not auto_mode and cc_mode):
+                #Make a PID for modulating Throttle...BILL!...neye the science guy.
+                servoDriver.setPWM(rudder_channel, 0, 290) #fixed rudder
+                throttlePidValue = throttlePid.update(pitch_angle)
+                throttleServoValue = int(restrictValues(mapValue(throttlePidValue, -45, 45, 400, 260)))
+                servoDriver.setPWM(throttle_channel, 0, throttleServoValue)
+                #Make PID for the throttle
+            servoDriver.setPWM(pan_channel, 0, 290)
+            servoDriver.setPWM(tilt_channel, 0, 250)
     except KeyboardInterrupt:
         #print "Killing program"
         gpsp.running = False
