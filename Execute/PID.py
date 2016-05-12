@@ -9,6 +9,7 @@ import os
 from gps import *
 from time import *
 import threading
+from heading import *
 
 class PID:
 	"""
@@ -195,19 +196,26 @@ if __name__ == '__main__':
 
     elevatorPid = PID()
     rollPid = PID()
+    altitudePid = PID()
+    rudderPid = PID()
 
     pitch_angle, yaw_angle, roll_angle = getPitchYawRoll(Gyro, Accel)
-
+        
     elevatorPid.setPoint(pitch_angle)
     rollPid.setPoint(roll_angle)
+    rudderPid.setPoint(0) # Change 0 to "zero" for servo (value that's straight)
     b, m = findMapping(elevatorPid, -90, 90, 410, 195)
 
     try:
         gpsp.start() # start it up
+        altitudePid.setPoint(gpsd)
+        
         while True:
             pitch_angle, yaw_angle, roll_angle = getPitchYawRoll(Gyro, Accel)
 
             rollPidValue = rollPid.update(roll_angle)
+            altitudePidValue = altitudePid.update(gpsd.fix.altitude)
+            elevatorPid.setPoint(scaleAltitude(altitudePidValue))
             elevatorPidValue = elevatorPid.update(pitch_angle)
 
             print('Pitch: ' + str(pitch_angle) + '\tYaw: ' + str(yaw_angle) + '\tRoll: ' + str(roll_angle))
