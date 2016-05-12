@@ -203,7 +203,7 @@ if __name__ == '__main__':
     b, m = findMapping(elevatorPid, -90, 90, 410, 195)
 
     try:
-        gpsp.start() # start it up
+        #gpsp.start() # start it up
         while True:
             pitch_angle, yaw_angle, roll_angle = getPitchYawRoll(Gyro, Accel)
 
