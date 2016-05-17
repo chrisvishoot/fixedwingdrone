@@ -11,6 +11,8 @@ from gps import *
 from time import *
 import threading
 from heading import *
+import serial
+import RPi.GPIO as GPIO
 
 
 #---------------------------------------------------------------
@@ -35,6 +37,7 @@ GPIO.setup(cc_req_pin, GPIO.IN,pull_up_down=GPIO.PUD_DOWN)
 GPIO.setup(auto_req_pin, GPIO.IN,pull_up_down=GPIO.PUD_DOWN)
 GPIO.setup(cc_akn_pin, GPIO.OUT)
 GPIO.setup(auto_akn_pin, GPIO.OUT)
+GPIO.setup(uart_toggle, GPIO.OUT) # Toggle between gps and xbee
 
 def cc_req(channel):
 	print("Changing CC Mode")
@@ -191,6 +194,8 @@ def restrictValues(value):
 	return value
 
 gpsd = None #seting the global variable
+prevLocation = None
+heading = None
 
 class GpsPoller(threading.Thread):
   def __init__(self):
@@ -204,21 +209,20 @@ class GpsPoller(threading.Thread):
     global gpsd
     while gpsp.running:
         try:
+            prevLocation = (gpsd.fix.latitude, gpsd.fix.longitude)
+            GPIO.output(uart_toggle, False)
+            time.sleep(0.01) # Delay for 10 ms to make sure we're connected to the GPS
             gpsd.next() #this will continue to loop and grab EACH set of gpsd info to clear the buffer
+            if (prevLocation is not None):
+                heading = getTargetHeading(prevLocation, (gpsd.fix.latitude, gpsd.fix.longitude))
+            time.sleep(1)
         except(StopIteration):
             pass
 
+ser = serial.Serial("/dev/ttyAMA0")    #Open named port
+ser.baudrate = 9600                     #Set baud rate to 9600, might have to change this
+
 if __name__ == '__main__':
-
-    # cc_akn_pin = 24
-    # cc_req_pin = 23
-    # auto_akn_pin = 4
-    # auto_req_pin = 17
-    #
-    # # Mode control variables
-    # auto_mode = False
-    # cc_mode = False
-
     Gyro = L3GD20(busId = 1, slaveAddr = 0x6b, ifLog = False, ifWriteBlock=False)
     Gyro.Set_PowerMode("Normal")
     Gyro.Set_FullScale_Value("250dps")
@@ -258,11 +262,16 @@ if __name__ == '__main__':
     try:
         while True:
             pitch_angle, yaw_angle, roll_angle = getPitchYawRoll(Gyro, Accel)
-
+            
             if(auto_mode):
+                
                 #FOR THE RUDDER PID ALGORITHM:
                 #We need the Xbee for the target location, and currently this is not implemented yet
                 #After Xbee is working, get the code from sensors / PID.py - sensors
+                # Example target location sent through uart: "  47.244251, -122.438301, 124.5"
+                #                                               (lat-11) ,  (long-11) , (alt-5)
+                #                                                  (31 characters total)
+                # Need to read in 31 characters for a target location
 
                 throttlePidValue = throttlePid.update(pitch_angle)
 
@@ -290,17 +299,41 @@ if __name__ == '__main__':
                 servoDriver.setPWM(elevator_channel, 0, elevatorServoValue)
                 servoDriver.setPWM(aileron_channel, 0, rollServoValue)
                 servoDriver.setPWM(throttle_channel, 0, throttleServoValue)
+                
+                # Send telemetry through Xbee
+                # Pitch, Roll, Latitude, Longitude, Altitude, Heading, elevatorServo, aileron servo, throttle servo
+                data = str(pitch_angle) + ',' + str(roll_angle) + ',' + str(gpsd.fix.latitude) + ',' + 
+                       str(gpsd.fix.longitude) + ',' + str(gpsd.fix.altitude) + ',' + str(heading) + ',' + 
+                       str(elevatorServoValue) + ',' + str(rollServoValue) + ',' + str(throttleServoValue)
+                GPIO.output(uart_toggle, True)
+                time.sleep(0.01) # delay for 10 ms
+                ser.write(data)
+                
+                #nextHeading = ser.read(31) # get target location from xbee. Needs figuring out because read will halt until characters are received
+                # Need to figure out when there is a new target location
+                
             elif(not auto_mode and cc_mode):
                 #Make a PID for modulating Throttle...BILL!...neye the science guy.
-                servoDriver.setPWM(rudder_channel, 0, 290) #fixed rudder
                 throttlePidValue = throttlePid.update(pitch_angle)
                 throttleServoValue = int(restrictValues(mapValue(throttlePidValue, -45, 45, 400, 260)))
                 servoDriver.setPWM(throttle_channel, 0, throttleServoValue)
+                servoDriver.setPWM(rudder_channel, 0, 290) #fixed rudder
                 #Make PID for the throttle
+                
+                # Send telemetry through Xbee
+                # Pitch, Roll, Latitude, Longitude, Altitude, Heading, throttle servo, rudder servo
+                data = str(pitch_angle) + ',' + str(roll_angle) + ',' + str(gpsd.fix.latitude) + ',' + 
+                       str(gpsd.fix.longitude) + ',' + str(gpsd.fix.altitude) + ',' + str(heading) + ',' + 
+                       str(290) + ',' + str(throttleServoValue)
+                GPIO.output(uart_toggle, True)
+                time.sleep(0.01) # delay for 10 ms
+                ser.write(data)
+            
             servoDriver.setPWM(pan_channel, 0, 290)
             servoDriver.setPWM(tilt_channel, 0, 250)
     except KeyboardInterrupt:
         #print "Killing program"
+        ser.close()
         gpsp.running = False
         gpsp.join()
         time.sleep(1)

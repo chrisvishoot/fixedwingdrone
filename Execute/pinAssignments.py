@@ -12,3 +12,5 @@ elevator_channel = 2
 rudder_channel = 3
 pan_channel = 4
 tilt_channel = 5
+
+uart_toggle = 21 # Toggle line to go between gps and xbee
